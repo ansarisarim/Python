@@ -539,7 +539,92 @@ TypeError: 'range' object does not support item assignment
 150
 -------------------------------------------------------
 
+LIST Category Data Type:
 
+# LIST = Ek box mein multiple alag-alag items
+# Jaise tiffin box mein: sabzi, dal, rice, roti
+
+lunch_box = ["sabzi", "dal", "rice", "roti"]
+lunch_box[0] = "bhindi"      # ✅ Sabzi change kar diya
+print(lunch_box)             # ['bhindi', 'dal', 'rice', 'roti']
+
+
+# STRING = Ek long text (jaise book pe likha ek sentence)
+# Sentence change karne ke liye naya sentence likho
+
+sentence = "Hello World"
+# sentence[0] = "J"          # ❌ Can't change
+new_sentence = "Jello World" # ✅ Naya sentence likho
+
+
+------------------------------------------------------------------------------------------------------
+
+
+list:   MUTABL (allow updation and modification)
+
+>>> list=[12, 32, 55, -4, -32, 'rossom', 280, False, 3+5j, -4.5]
+>>> print(list, type(list), id(list))
+[12, 32, 55, -4, -32, 'rossom', 280, False, (3+5j), -4.5] <class 'list'> 1355241302016
+
+
+>>> list1=[12.12, 12.12, 'sarim', 'sarim', 229, 00, -4+5j]
+>>> print (list1, type(list), id(list1))
+[12.12, 12.12, 'sarim', 'sarim', 229, 0, (-4+5j)] <class 'list'> 1355241404672
+
+>>> list1[1]
+12.12
+>>> list[-2]
+(3+5j) 
+
+[12, 32, 43, 12, 32, 43] <class 'list'>
+>>> x=[3.2, True, False, "sarim", 3+4j, 12 ]
+>>> print (x,type(x))
+[3.2, True, False, 'sarim', (3+4j), 12] <class 'list'>
+
+>> x(-3)
+Traceback (most recent call last):
+  File "<python-input-174>", line 1, in <module>
+    x(-3)
+    ~^^^^
+TypeError: 'list' object is not callable
+>>> x[-3]
+'sarim'
+
+>>> x[-1:-5:-1]
+[12, (3+4j), 'sarim', False]
+
+>>> c = ("q", 12, "w2", 1)
+>>> print(c,type(c))
+('q', 12, 'w2', 1) <class 'tuple'>
+
+>>> c = ["q", 12, "w2", 1]
+>>> print(c,type(c))
+['q', 12, 'w2', 1] <class 'list'>
+
+>>> c = "q 12 w2 1"
+>>> print(c,type(c))
+q 12 w2 1 <class 'str'>
+
+>>> c = 12
+>>> print(c,type(c))
+12 <class 'int'>
+
+
+
+
+
+>>> print(x,type(x),id(x))
+[3.2, 'abc', False, 'sarim', (3+4j), 12] <class 'list'> 1355241446080
+
+>>> x[-1:-3]=[True,"zxy"]  #slice base updation
+>>> print(x,type(x),id(x))
+[3.2, 'abc', False, 'sarim', (3+4j), True, 'zxy', 'xyz'] <class 'list'> 1355241446080
+
+>>> print(x,type(x),id(x))
+[3.2, 'abc', False, 'sarim', (3+4j), 12] <class 'list'> 1355241446080
+>>> x[-1]="xyz"      #index base updation
+>>> print(x,type(x),id(x))
+[3.2, 'abc', False, 'sarim', (3+4j), 'xyz'] <class 'list'> 1355241446080
 
 
 
