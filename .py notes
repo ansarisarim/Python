@@ -538,28 +538,6 @@ TypeError: 'range' object does not support item assignment
 200
 150
 -------------------------------------------------------
-
-LIST Category Data Type:
-
-# LIST = Ek box mein multiple alag-alag items
-# Jaise tiffin box mein: sabzi, dal, rice, roti
-
-lunch_box = ["sabzi", "dal", "rice", "roti"]
-lunch_box[0] = "bhindi"      # ✅ Sabzi change kar diya
-print(lunch_box)             # ['bhindi', 'dal', 'rice', 'roti']
-
-
-# STRING = Ek long text (jaise book pe likha ek sentence)
-# Sentence change karne ke liye naya sentence likho
-
-sentence = "Hello World"
-# sentence[0] = "J"          # ❌ Can't change
-new_sentence = "Jello World" # ✅ Naya sentence likho
-
-
-------------------------------------------------------------------------------------------------------
-
-
 list:   MUTABL (allow updation and modification)
 
 >>> list=[12, 32, 55, -4, -32, 'rossom', 280, False, 3+5j, -4.5]
@@ -625,6 +603,253 @@ q 12 w2 1 <class 'str'>
 >>> x[-1]="xyz"      #index base updation
 >>> print(x,type(x),id(x))
 [3.2, 'abc', False, 'sarim', (3+4j), 'xyz'] <class 'list'> 1355241446080
+
+
+a) empty list
+------------
+>>> a=[]
+>>> print(a,type(a))
+[] <class 'list'>
+>>> len(a)
+0
+
+
+b) Non-empty list
+------------------
+>>> a=[12, 15, "sarim", 2+4j]
+>>> print(len(a), type(a))
+4 <class 'list'>
+
+>>> s="RADAR"   #String data into list
+>>> list(s)
+['R', 'A', 'D', 'A', 'R']
+
+
+>>> a=12
+>>> print(type(a))
+<class 'int'>
+>>> list(a)
+Traceback (most recent call last):
+  File "<python-input-262>", line 1, in <module>
+    list(a)
+    ~~~~^^^
+TypeError: 'int' object is not iterable
+
+-> Then how to do it, we have a lternative solution.
+
+Q- iterable object can be convert in list.... yes 
+>>> a=123
+>>> print(a,type(a))
+123 <class 'int'>
+>>> list(a)
+Traceback (most recent call last):
+  File "<python-input-268>", line 1, in <module>
+    list(a)
+
+TypeError: 'int' object is not iterable
+>>> list[(a)]
+list[123]
+>>> b=list[(a)]
+>>> print(b,type(a))
+list[123] <class 'int'>
+
+
+>>> d="12, 13, 15"      <----iritable
+>>> print(d,type(d))
+12, 13, 15 <class 'str'>
+>>> list(d)
+['1', '2', ',', ' ', '1', '3', ',', ' ', '1', '5']
+>>> d=12           <----nonirritable (bool,int,float,complex)
+>>> list(d)
+Traceback (most recent call last):
+  File "<python-input-277>", line 1, in <module>
+    list(d)
+    ~~~~^^^
+TypeError: 'int' object is not iterable
+>>> list([d])
+[12]
+---------------------------------------------------------------------------------------------------------------
+.append     <----------
+>>> a=[12, 13, "sarim"]
+>>> print(a,type(a),id(a))
+[12, 13, 'sarim'] <class 'list'> 1355241306752
+
+>>> a.append(13)
+>>> print(a,type(a),id(a))
+[12, 13, 'sarim', 13] <class 'list'> 1355241306752
+
+>>> a.append("ansari")
+>>> print(a,type(a),id(a))
+[12, 13, 'sarim', 13, 'ansari'] <class 'list'> 1355241306752
+
+
+>>> d=[]
+>>> print(d,id(d))
+[] 1355241343488
+>>> print(d,id(d),type(d))
+[] 1355241343488 <class 'list'>
+>>> d.append(12)
+>>> d.append("sarim")
+>>> d.append("@#$")
+>>> print(d,id(d),type(d))
+[12, 'sarim', '@#$'] 1355241343488 <class 'list'>
+
+----------------------------------------------------------------------------------------------------
+.insert <--------------------------------------
+>>> d.insert(2,"abc")
+>>> print(d,id(d),type(d))
+[12, 'sarim', 'abc', '@#$'] 1355241343488 <class 'list'>
+>>> d.insert(0,"@##")
+>>> print(d,id(d),type(d))
+['@##', 12, 'sarim', 'abc', '@#$'] 1355241343488 <class 'list'>
+>>> d.insert(-1,"sarim")
+
+>>> print(d,id(d),type(d))
+['@##', 12, 'sarim', 'abc', 'sarim', '@#$'] 1355241343488 <class 'list'>   NOte : its change on -1 index and the value in -1 index are move forword 
+ becz its add not replace be remember 
+
+>>> print(c)
+[1, 2]
+>>> c.insert(-1,3)
+>>> print(c,type(c))
+[1, 3, 2] <class 'list'>
+
+
+>>> print(c)
+[1, 2]
+>>> c.insert(-400,300)
+>>> print(c)
+[300, 1, 2]
+>>> c.insert(400,300)
+>>> print(c)
+[300, 1, 2, 300]
+
+IMPORTANT QUESTION
+
+>>> print(c)
+[1, 2]
+>>> c.insert(-400,300)
+>>> print(c)
+[300, 1, 2]
+>>> c.insert(400,300)
+>>> print(c)
+[300, 1, 2, 300]
+
+---------------------------------------------------------------------------------------
+.remove (base on value)
+>>> lst=[12, "#$", "xyz", 32+5j, 398]
+>>> remove.lst(12)
+Traceback (most recent call last):
+  File "<python-input-339>", line 1, in <module>
+    remove.lst(12)
+NameError: name 'remove' is not defined
+>>> lst.remove(12)
+>>> lst.remove("#$")
+>>> lst.remove("xyz")
+>>> print(lst)
+[(32+5j), 398]
+>>> lst.remove((32+5j))
+>>> lst.remove(398)
+>>> print(lst)
+[]
+>>> lst.remove('avc')     lst.remove('avc')
+    ~~~~~~~~~~^^^^^^^
+ValueError: list.remove(x): x not in list
+
+
+
+>>> lst=[12, 15, 13, 00, 12, 12, 12, 12]
+>>> print(lst)
+[12, 15, 13, 0, 12, 12, 12, 12]
+>>> lst.remove(12)     remove first accurunce only <-----   if you want to remove on index base go for pop.    
+>>> print(lst)
+[15, 13, 0, 12, 12, 12, 12]
+
+>>> lst.remove(12)
+>>> print(lst)
+[15, 13, 0, 12, 12, 12]
+
+------------------------------------------------------------------------------------------------------
+pop(index)  <---- index base removal only 
+
+>>> print(lst)
+[12, 15, 13, 0, 12, 12, 12]
+>>> lst.pop(-1)
+12
+>>> print(lst)
+[12, 15, 13, 0, 12, 12]
+>>> lst.pop(-4)
+13
+>>> print(lst)
+[12, 15, 0, 12, 12]
+>>> lst.pop(1)
+15
+>>> print(lst)
+
+
+
+lst = [12, 15, 13, 00, 12, 12, 12, 12]
+lst.pop(-1, -2, -3, -4)     # ❌ Multiple indices nahi chalte
+Problem: pop() ko sirf ek hi index de sakte ho, ek baar mein multiple remove nahi kar sakte.
+
+>>> print(lst)
+[12, 0, 12, 12]
+>>> lst.pop(4)
+Traceback (most recent call last):
+  File "<python-input-402>", line 1, in <module>
+    lst.pop(4)
+    ~~~~~~~^^^
+IndexError: pop index out of range    <--index error
+------------------------------------------------------------------------------------
+
+lst.pop() <---- always last one remove
+>>> lst=[12, 15, 13, 00, 12, 412, 42, 4]
+>>> lst.pop()
+4
+>>> print(lst)
+[12, 15, 13, 0, 12, 412, 42]
+
+------------------------------------------------------------------------------------
+>>> name=["rehan", "sajid", "asjad", "arqam" , "mirza"]  <----list
+>>> print(name, type(name), id(name))
+['rehan', 'sajid', 'asjad', 'arqam', 'mirza'] <class 'list'> 1355268508224
+
+>>> name.remove("asjad")    <---------- vale base remove 
+>>> print(name, type(name), id(name))
+['rehan', 'sajid', 'arqam', 'mirza'] <class 'list'> 1355268508224
+
+>>> name.pop()     <---- last one remove 
+'mirza'
+>>> print(name, type(name), id(name))
+['rehan', 'sajid', 'arqam'] <class 'list'> 1355268508224
+
+>>> name.pop(1)    <---- index base remove 
+'sajid'
+>>> print(name, type(name), id(name))
+['rehan', 'arqam'] <class 'list'> 1355268508224
+
+
+
+----------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
