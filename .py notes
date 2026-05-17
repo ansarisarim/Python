@@ -831,6 +831,8 @@ lst.pop() <---- always last one remove
 
 
 ----------------------------------------------------------------------------------------------------------------
+.index
+
 >>> b=["sarim", "swc", 123, "ansari"]
 >>> b.index("sarim")
 0
@@ -842,27 +844,147 @@ lst.pop() <---- always last one remove
 >>> b.index("mumbai")
 ValueError: list.index(x): x not in list     <---mumbai is not in list
 
+enumerate()
+----------------
+enumerate is the function to obtain the value of any iterable object.
+syntax   for index,value in enumerate(iterableobject):
+            print(index.value)
+>>> d=[12, 23, 34, 45, 56, 67, 78, 89, 90]
+>>> print(d)
+[12, 23, 34, 45, 56, 67, 78, 89, 90]
+>>> print(d,type(d),id(d))
+[12, 23, 34, 45, 56, 67, 78, 89, 90] <class 'list'> 2047905217728
+>>> for index,value in enumerate(d):
+...     print(index,"--->",value)
+...
+0 ---> 12
+1 ---> 23
+2 ---> 34
+3 ---> 45
+4 ---> 56
+5 ---> 67
+6 ---> 78
+7 ---> 89
+8 ---> 90
+
+
+
+>>> d=[12, 3.4, 21, 33, 3+5j]
+>>> for value, index in enumerate(d):
+...     print(value,"--->",index)
+0 ---> 12
+1 ---> 3.4
+2 ---> 21
+3 ---> 33
+4 ---> (3+5j)
+
+
+>>> list = ["apple", "sarim", "mango", "sarim"]
+>>>
+>>> for index, value in enumerate(list):
+...         if(value == "sarim"):
+...                         print(value, "----->", index)
+...
+sarim -----> 1
+sarim -----> 3
+
+>>> for index, value in enumerate(list):
+...         if(value == "sarim"):
+...                 print(value,"---->",index)
+...
+sarim ----> 1
+sarim ----> 3
+
+for str 
+--------------
+>>> d="python language"
+>>> for index, value in enumerate(d):
+...         print( value, "------->",index)
+...
+p -------> 0
+y -------> 1
+t -------> 2
+h -------> 3
+o -------> 4
+n -------> 5
+  -------> 6
+l -------> 7
+a -------> 8
+n -------> 9
+g -------> 10
+u -------> 11
+a -------> 12
+g -------> 13
+e -------> 14
+
+
 
 -------------------------------------------------------------------------------------------------------------------
+.count
+>>> print(d)
+[12, 23, 23, 44, 12]
+>>> d.count(12)
+2
+>>> d.count(23)
+2
+>>> d.count(44)
+1
+>>>
+
+>>> d.count(50)   <---- its not value error its like 50 kitni bar aaya hai 0 bar
+0
+>>> d.count(400)
+0
+>>> [].count(20)
+0
+
+>>> q="qwewwqd"
+>>> a=list(q)
+>>> print(q,type(q))
+qwewwqd <class 'str'>
+>>> print(a,type(a))
+['q', 'w', 'e', 'w', 'w', 'q', 'd'] <class 'list'>
+>>> a.count('w')
+3
 
 
+-----------------------------------------------------
+.extend
+
+>>> a.insert(0,b)
+>>> print(a)
+[[12, 32, 43], 2, 4, 5, 2.4]   <its doing inne list eithe .inser or .append both do inner list we want merg or so
+
+>>> a=[11, 12, 13, 14, 15]
+>>> b=[16, 17, 18, 19, 20]
+>>> a.extend(b)
+>>> print(a)
+[11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+>>> print(b)   <---but be become same and a having a and b data in it.
+[16, 17, 18, 19, 20]
+
+>>> b.extend((a),(c))
+Traceback (most recent call last):
+  File "<python-input-196>", line 1, in <module>
+    b.extend((a),(c))    TypeError: list.extend() takes exactly one argument (2 given)
+    
 
 
+>>> b.extend(a)
+>>> b.extend(c)
+>>> print(b)
+[16, 17, 18, 19, 20, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 13, 34, 54, 32]
+
+.extend allow to merge only one list object to anothe i can not do oe list object to mutiple list object so to solve this problem
++ operator
+>>> a=[1, 2, 3, 4]
+>>> b=[5, 6, 7, 8]
+>>> c=[9, 10]
+>>> a=a+b+c    <----its add at which sequence we provide first a,then b,c
+>>> print(a)
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+----------------------------------------------------------------------------------------------------------------------------
 
 
