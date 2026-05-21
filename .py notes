@@ -1064,6 +1064,21 @@ reverse() kya karta hai:
 
 ❌ Alphabetically sort nahi karta
 #   4       3        2        1       0
+
+Inner list OR Nested List:
+-------------------------------------
+
+>>> inlist = [12, ["sarim", "mumbai", "bangloru"], 13, 14, [3.4, True, False ], True, 3.2]
+>>> for value in inlist:
+...     print (value,"------->",type(inlist))
+...
+12 -------> <class 'list'>
+['sarim', 'mumbai', 'bangloru'] -------> <class 'list'>
+13 -------> <class 'list'>
+14 -------> <class 'list'>
+[3.4, True, False] -------> <class 'list'>
+True -------> <class 'list'>
+3.2 -------> <class 'list'>
 ------------------------------------------------------------------------------------------------------------------------------------
                                                           List END
 ------------------------------------------------------------------------------------------------------------------------------------
