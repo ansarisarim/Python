@@ -1245,3 +1245,13 @@ TypeError: 'tuple' object does not support item assignment
 <class 'tuple'>
 
 
+
+>>> a="sarim"
+>>> print(a,type(a))
+sarim <class 'str'>
+>>> tuple(a)
+('s', 'a', 'r', 'i', 'm')
+>>> list(a)
+['s', 'a', 'r', 'i', 'm']
+
+
