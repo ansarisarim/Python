@@ -1255,3 +1255,56 @@ sarim <class 'str'>
 ['s', 'a', 'r', 'i', 'm']
 
 
+>>> a=(2, 4, "a", "d")
+>>> type(a)
+<class 'tuple'>
+>>> a=2, 4, "a", "d"
+>>> type(a)
+<class 'tuple'>
+>>> a=2
+>>> type(a)
+<class 'int'>
+>>> a=2,       <----- most asked question  (its valid or invalid) 
+>>> type(a)
+<class 'tuple'>
+>>> print(a)
+(2,)
+
+
+
+
+in copy there is deep copy is possible shalow copy is not possible 
+
+>>> a=b
+>>> print(a)
+(12, 13, 'abc')
+>>> print(b)
+(12, 13, 'abc')
+>>> a=b.copy()
+Traceback (most recent call last):
+  File "<python-input-227>", line 1, in <module>
+    a=b.copy()
+      ^^^^^^
+AttributeError: 'tuple' object has no attribute 'copy'
+
+---------------------------------------------------------------------------------------------------------------
+tuple type does not have the function of sort because its immutable we are not abe to change the
+value so sorted(obj) function change the tuple to list and sort the data.
+sorted(obj)
+
+>>> a=(1, 4, 2, 8, 4)
+>>> print(a,type(a))
+(1, 4, 2, 8, 4) <class 'tuple'>
+>>> b=a.sort()
+Traceback (most recent call last):
+  File "<python-input-274>", line 1, in <module>
+    b=a.sort()
+      ^^^^^^
+>>> b=sorted(a)                  
+>>> print(b,type(b))
+[1, 2, 4, 4, 8] <class 'list'>
+
+
+
+
+
