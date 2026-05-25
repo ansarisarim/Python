@@ -1305,6 +1305,24 @@ Traceback (most recent call last):
 [1, 2, 4, 4, 8] <class 'list'>
 
 
+---------------------------------------------
+>>> a=[1, 2, 3, 9, 8, 7, 6]
+>>> b=a.sort()
+>>> print(b)<------------ sort karega but new list ni banata thats why its give none
+None
+>>> a.sort()   <---------------- ye usi list ko sort karta hai 
+>>> print(a)
+[1, 2, 3, 6, 7, 8, 9]
+
+# if you want to creat new list
+>>> b=sorted(a)
+>>> print(b)
+[1, 3, 3, 4, 5, 5, 6]
+
+>>> a=(1, 3, 5, 6, 5, 4, 3)
+>>> b=sorted(a)     < basicly list me convert karta hai or new list banata hai list ho ya touple ho 
+>>> print(b)
+[1, 3, 3, 4, 5, 5, 6]
 
 
 
