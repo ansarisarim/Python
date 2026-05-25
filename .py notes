@@ -1148,6 +1148,15 @@ True -------> 5
 
 TUPLE
 ------------
+
+Empty Tuple
+>>> a=()
+>>> print(a,type(a))
+() <class 'tuple'>
+>>> len(a)
+0
+
+NON-E mpty Tuple
 >>> a=(12, 32, 14, 32, "sarim", "mumbai")
 >>> print(a,type(a))
 (12, 32, 14, 32, 'sarim', 'mumbai') <class 'tuple'>
@@ -1164,7 +1173,7 @@ TUPLE
 >>> a[1:7]
 (32, 14, 32, 'sarim', 'mumbai'
 
-
+--------------------------------------------------------------------
 
 >>> print(a,type(a))
 (12, 32, 14, 32, 'sarim', 'mumbai') <class 'tuple'>
@@ -1174,4 +1183,31 @@ Traceback (most recent call last):
     a[-1]="abc"
     ~^^^^
 TypeError: 'tuple' object does not support item assignment
+
+syntax-1
+>>> b=("abc", 1, 2, 3, 3+4J, "!@#")
+>>> print(b,type(b),len(b))
+('abc', 1, 2, 3, (3+4j), '!@#') <class 'tuple'> 6
+
+syntax-2
+>>> b="abc", 1, 2, 3, 3+4J, "!@#"
+>>> print(b,type(b),len(b))
+('abc', 1, 2, 3, (3+4j), '!@#') <class 'tuple'> 6
+
+>>> a=['abc', 1, 2, 3, (3+4j), '!@#']
+>>> type(a)
+<class 'list'>
+>>> a[-1]=12
+>>> print(a)
+['abc', 1, 2, 3, (3+4j), 12]
+>>> a=('abc', 1, 2, 3, (3+4j), '!@#')
+>>> type(a)
+<class 'tuple'>
+>>> a[-1]=12
+Traceback (most recent call last):
+  File "<python-input-112>", line 1, in <module>
+    a[-1]=12
+    ~^^^^
+TypeError: 'tuple' object does not support item assignment
+
 
