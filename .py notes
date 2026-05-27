@@ -824,11 +824,47 @@ lst.pop() <---- always last one remove
 'mirza'
 >>> print(name, type(name), id(name))
 ['rehan', 'sajid', 'arqam'] <class 'list'> 1355268508224
-
+-------------------------------------------------------
 >>> name.pop(1)    <---- index base remove 
 'sajid'
 >>> print(name, type(name), id(name))
 ['rehan', 'arqam'] <class 'list'> 1355268508224
+---------------------------------------------------------------------------------------------------------
+del operator
+--------------
+
+1. Delete a Variable
+python# Simple variable delete
+a = 10
+print(a)        # 10
+del a
+print(a)        # ❌ NameError: name 'a' is not defined
+
+2. Delete Single Item from List (By Index)
+pythonlst = [10, 20, 30, 40, 50]
+print(lst)      # [10, 20, 30, 40, 50]
+
+del lst[0]      # Delete first element
+print(lst)      # [20, 30, 40, 50]
+del lst[-1]     # Delete last element
+print(lst)      # [20, 30, 40]
+
+3. Delete Multiple Items from List (Slicing)
+pythonlst = [10, 20, 30, 40, 50, 60, 70]
+print(lst)      # [10, 20, 30, 40, 50, 60, 70]
+del lst[1:4]    # Delete index 1, 2, 3
+print(lst)      # [10, 50, 60, 70]
+del lst[::2]    # Delete every alternate element
+print(lst)      # [50, 70]
+
+4. Delete Entire List
+pythonlst = [10, 20, 30, 40, 50]
+print(lst)      # [10, 20, 30, 40, 50]
+
+del lst         # Delete entire list
+print(lst)      # ❌ NameError: name 'lst' is not defined
+
+
 
 
 
@@ -1211,7 +1247,7 @@ Traceback (most recent call last):
 TypeError: 'tuple' object does not support item assignment
 
 
-
+ 
 
 >>> a=['abc', 1, 2, 3, (3+4j), '!@#']
 >>> type(b)
@@ -1323,6 +1359,17 @@ None
 >>> b=sorted(a)     < basicly list me convert karta hai or new list banata hai list ho ya touple ho 
 >>> print(b)
 [1, 3, 3, 4, 5, 5, 6]
+
+
+>>> a=(1, 3, 2, 5, 4.7)
+>>> b=sorted(a)[::-1]     <--- sorted convert the tuple in list.
+>>> print(b)
+[5, 4.7, 3, 2, 1]
+>>> print(type(b))
+<class 'list'>
+
+
+
 
 
 
