@@ -1427,6 +1427,33 @@ List in List
 >>> print(a,type(a))
 [12, 32, 44] <class 'list'>
 
+Add tuple in list
+---------------------
+
+>>> print(a)
+[12, 32, 44, [12, 13, 14], (0, 'sarim'), [1, 2, 3]]
+>>> a.insert(-1,((0, "sarim")))
+>>> print(a,type(a))
+[12, 32, 44, [12, 13, 14], (0, 'sarim'), (0, 'sarim'), [1, 2, 3]] <class 'list'>
+
+12 --> <class 'int'>
+32 --> <class 'int'>
+44 --> <class 'int'>
+[12, 13, 14] --> <class 'list'>
+(0, 'sarim') --> <class 'tuple'>
+(0, 'sarim') --> <class 'tuple'>
+[1, 2, 3] --> <class 'list'>
+
+
+we have added
+1) list in list
+2) list in tuple
+3) tuple in list
+4) tuple in tuple
+
+
+
+
 
 
 
