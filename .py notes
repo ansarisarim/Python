@@ -1393,6 +1393,43 @@ Tuple inside of Tuple
 2
 
 
+List inside of Tuple
+---------------------------
+
+>>> a[2].append(0)
+>>> print(a)
+('wq', 12, [12, 43, 'sarim', 2.2, 0], 0)
+
+>>> a[2].remove("sarim")
+>>> print(a)
+('wq', 12, [12, 43, 2.2, 0], 0)
+
+NOTE:  we can not remove entire list in this because its part of tuple.
+>>> a[2].append(0)
+>>> print(a)
+('wq', 12, [12, 43, 'sarim', 2.2, 0], 0)
+>>> a[2].remove("sarim")
+>>> print(a)
+('wq', 12, [12, 43, 2.2, 0], 0)
+
+List in List
+----------------------
+>>> a=[12, 32, 44]
+>>> print(a,type(a))
+[12, 32, 44] <class 'list'>
+
+>>> a.append([1, 2, 3])
+>>> print(a)
+[12, 32, 44, [1, 2, 3]]
+
+
+>>> a=[12, 32, 44]
+>>> print(a,type(a))
+[12, 32, 44] <class 'list'>
+
+
+
+
 
 
 
