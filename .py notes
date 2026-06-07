@@ -1457,6 +1457,37 @@ we have added
 ------------------------------------------------------------------------------------------------------------------------------------
 set category data type
 
+>>> a={"a", "b", "c"}
+>>> print(a,type(a))
+{'b', 'a', 'c'} <class 'set'>
+>>> print(a,type(a))
+{'b', 'a', 'c'} <class 'set'>
+
+Note: indexing and slicing can not perform on set bcoz set does not maintain insertion order.
+>>> a[2]
+Traceback (most recent call last):
+  File "<python-input-15>", line 1, in <module>
+    a[2]
+TypeError: 'set' object is not subscriptable
+
+
+>>> a[0:2]
+Traceback (most recent call last):
+  File "<python-input-16>", line 1, in <module>
+    a[0:2]
+TypeError: 'set' object is not subscriptable
+
+
+# LIST - ORDERED hai
+lst = [1, 2, 3]
+lst.append(4)
+print(lst)      # [1, 2, 3, 4]   Order maintain hota hai
+# append() = "END mein add karo" End ka concept sirf ORDERED cheez mein hota hai
+
+# SET - UNORDERED hai  thats why its does not support append or insert.
+s = {1, 2, 3}
+s.add(4)
+print(s)        # {1, 2, 3, 4} (order random!)    Koi fixed position nahi!
 
 
 
