@@ -1490,8 +1490,97 @@ s.add(4)
 print(s)        # {1, 2, 3, 4} (order random!)    Koi fixed position nahi!
 
 
+>>> print(a,type(a), id(a))
+{'b', 'a', 'd', 'c'} <class 'set'> 2922791132448
+>>> a.add("e")
+>>> print(a,type(a), id(a))
+{'c', 'b', 'e', 'a', 'd'} <class 'set'> 2922791132448
 
 
+>>> a=()
+>>> print(type(a))
+<class 'tuple'>
+
+>>> b=[]
+>>> print(b,type(b))
+[] <class 'list'>
+
+>>> c={}    <--- we can not creat set like that   compalsory question.
+>>> print(c,type(c))
+{} <class 'dict'>       <-- its dict not set 
+
+
+
+>>> a=list()
+>>> print(a,type(a))
+[] <class 'list'>
+
+>>> b=tuple()
+>>> print(b,type(b))
+() <class 'tuple'>
+
+>>> c=set()    <----- only way to create empty set
+>>> print(c,type(c))
+set() <class 'set'>
+
+
+Q. How do you remove dublicate element from list.
+>>> a=[1, 2, 3, 4, 5, 5, 4, 3, 2, 1]
+>>> print(a, type(a), len(a))
+[1, 2, 3, 4, 5, 5, 4, 3, 2, 1] <class 'list'> 10
+>>> b=set(a)
+>>> print(b,type(b),len(b))
+{1, 2, 3, 4, 5} <class 'set'> 5
+
+- remove duplicate fron str
+>>> a="mississipi"
+>>> print(a,type(a),len(a))
+mississipi <class 'str'> 10
+b=set(a)
+>>> print(b,type(b),len(b))
+{'i', 'p', 's', 'm'} <class 'set'> 4
+
+- remove duplicate fron tuple
+>>> a=(12, 34, 43, 21, 12, 43, 21)
+>>> print(a,type(a),len(a))
+(12, 34, 43, 21, 12, 43, 21) <class 'tuple'> 7
+>>> b=set(a)
+>>> print(b,type(b),len(b))
+{34, 43, 12, 21} <class 'set'> 4
+
+syntax2=
+obj=set()
+>>> a=set((12, 32, 12, 32, 12))        
+>>> print(a,type(a))
+{32, 12} <class 'set'>
+>>> b=set([12, 32, 12, 32, 12])
+>>> print(b,type(b))
+{32, 12} <class 'set'>
+
+
+>>> a=10
+>>> print(a,len(a))
+Traceback (most recent call last):
+  File "<python-input-88>", line 1, in <module>
+    print(a,len(a))          
+TypeError: object of type 'int' has no len()       <---fundamental tpe doesn't have len because it only have one value to know it we hae to convert it.
+
+>>> b=([a])
+>>> print(b,type(b),len(b))
+[10] <class 'list'> 1
+
+>>> a=10
+>>> b=[a]
+>>> print(b,type(b),len(b))
+[10] <class 'list'> 1
+
+- have to remember it.
+>>> a=(12)
+>>> print(a,type(a))
+12 <class 'int'>
+>>> a=(12,)    <----- ,is important
+>>> print(a,type(a))
+(12,) <class 'tuple'>
 
 
 
