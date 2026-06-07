@@ -1584,6 +1584,24 @@ TypeError: object of type 'int' has no len()       <---fundamental tpe doesn't h
 
 
 
+>>> a=10
+>>> type(a)
+<class 'int'>
+>>> a=(10)
+>>> type(a)
+<class 'int'>
+>>> a=(10,)
+>>> type(a)
+<class 'tuple'>
+>>> a={10}
+>>> type(a)
+<class 'set'>
+>>> a=[10]
+>>> type(a)
+<class 'list'>
+
+
+
 
 
 
