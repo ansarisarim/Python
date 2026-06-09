@@ -1463,7 +1463,7 @@ set category data type
 >>> print(a,type(a))
 {'b', 'a', 'c'} <class 'set'>
 
-Note: indexing and slicing can not perform on set bcoz set does not maintain insertion order.
+Note: indexing and slicing can not perform on set bcoz set does not maintain insertion order so no slicing and indexing can be performed.
 >>> a[2]
 Traceback (most recent call last):
   File "<python-input-15>", line 1, in <module>
@@ -1540,7 +1540,7 @@ b=set(a)
 >>> print(b,type(b),len(b))
 {'i', 'p', 's', 'm'} <class 'set'> 4
 
-- remove duplicate fron tuple
+- remove duplicate from tuple
 >>> a=(12, 34, 43, 21, 12, 43, 21)
 >>> print(a,type(a),len(a))
 (12, 34, 43, 21, 12, 43, 21) <class 'tuple'> 7
@@ -1563,7 +1563,7 @@ obj=set()
 Traceback (most recent call last):
   File "<python-input-88>", line 1, in <module>
     print(a,len(a))          
-TypeError: object of type 'int' has no len()       <---fundamental tpe doesn't have len because it only have one value to know it we hae to convert it.
+TypeError: object of type 'int' has no len()       <---fundamental type doesn't have len because it only have one value to know it we hae to convert it.
 
 >>> b=([a])
 >>> print(b,type(b),len(b))
@@ -1599,6 +1599,56 @@ TypeError: object of type 'int' has no len()       <---fundamental tpe doesn't h
 >>> a=[10]
 >>> type(a)
 <class 'list'>
+
+
+obj.add()        <--- adding the data in any order.
+>>> print(a)
+{'hgi', 'def', 'abc'}
+>>> a.add("dsds")
+>>> print(a,type(a))
+{'dsds', 'hgi', 'def', 'abc'} <class 'set'>
+
+
+obj.clear
+
+>>> print(a,type(a))                                                         
+{'dsds', 'hgi', 'def', 'abc'} <class 'set'>
+>>> print(a,type(a),id(a))
+{'dsds', 'hgi', 'def', 'abc'} <class 'set'> 1916749244544
+
+>>> a.clear()
+>>> print(a,type(a),id(a))
+set() <class 'set'> 1916749244544
+
+clear() = Sirf VALUES delete karta hai
+          OBJECT delete nahi hota!
+          MEMORY free nahi hoti!
+          
+Same ID = Same object memory mein hai
+          Bas andar ka data empty ho gaya!
+
+MUTABLE   → ID same rehta jab tak del na karo
+IMMUTABLE → Value change = New ID
+Both      → del karo = ID gone!
+
+
+>>> a={10, 20, 30, 40, 50}
+>>> print(a,type(a),id(a))
+{50, 20, 40, 10, 30} <class 'set'> 1916749243648
+>>> a.remove(10)
+>>> a.remove(20)
+>>> print(a,type(a),id(a))
+{50, 40, 30} <class 'set'> 1916749243648
+
+>>> a.remove(100)
+Traceback (most recent call last):
+  File "<python-input-50>", line 1, in <module>
+    a.remove(100)
+    ~~~~~~~~^^^^^
+KeyError: 100                     <--- in set if that spesific value is not there we got keyError because in set every value is unique so set treat the value as a key
+                                        id same thing in list so we got value Error
+
+
 
 
 
