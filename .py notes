@@ -1661,6 +1661,22 @@ KeyError: 100                     <--- in set if that spesific value is not ther
                                         id same thing in list so we got value Error
 
 
+Discard
+----------------------
+
+s = {1, 2, 3, 4,}
+
+>>> a.discard(5)
+>>> a.remove(5)
+Traceback (most recent call last):
+  File "<python-input-31>", line 1, in <module>
+    a.remove(5)
+    ~~~~~~~~^^^
+KeyError: 5
+
+discard :- value rehegi to remove karega ni rehegi to ni karega but error ni dega and      
+           remove value is teher to ye remove karega ni rehi to key eroor dega.(thats the only diffrence)
+
 
 
 
