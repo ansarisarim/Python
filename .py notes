@@ -1,3 +1,15 @@
+--------------------------------------------------------Terms----------------------------------------------------------
+Terms
+Item Assignment = Existing index pe value REPLACE karna
+Mutable   → Item Assignment ALLOWED   (List, Dict)
+Immutable → Item Assignment NOT ALLOWED
+
+--------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
 
 >>> c=3.2
 >>> print(c)
