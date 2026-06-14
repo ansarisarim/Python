@@ -1693,6 +1693,89 @@ discard :- value rehegi to remove karega ni rehegi to ni karega but error ni deg
 >>> a.pop()
 'ansari'
 
+>>> a.pop()
+Traceback (most recent call last):
+  File "<python-input-93>", line 1, in <module>
+    a.pop()
+    ~~~~~^^
+KeyError: pop from an empty set                  <-------- there is no key found to remove so its keyerror no value error or non
+
+
+Q. print ke bad first value pop karta hai or print ke pehle random value pop karta hai what the logic?
+>>> a={"rossom", "sarim", 3+5J, "ansari"}
+>>> a.pop()
+(3+5j)
+>>> a.pop()
+'sarim'
+>>> a.pop()
+'rossom'
+>>> a.pop()
+'ansari'
+>>> a.pop()
+Traceback (most recent call last):
+  File "<python-input-106>", line 1, in <module>
+    a.pop()
+    ~~~~~^^
+KeyError: 'pop from an empty set'
+>>> a={"rossom", "sarim", 3+5J, "ansari"}
+>>> print(a,type(a))
+{(3+5j), 'sarim', 'rossom', 'ansari'} <class 'set'>
+>>> a.pop()
+(3+5j)
+>>> a.pop()
+'sarim'
+>>> a.pop()
+'rossom'
+>>> a.pop()
+'ansari'
+>>> a.pop()
+Traceback (most recent call last):
+  File "<python-input-113>", line 1, in <module>
+    a.pop()
+    ~~~~~^^
+KeyError: 'pop from an empty set'
+
+SET internally HASH TABLE use karta hai.
+
+print() → Hash order mein dikhata hai
+pop()   → Hash order mein remove karta hai
+
+Dono ka source = Same HASH TABLE!
+Isliye dono ka order same lagta hai!
+
+print()    pop()
+(dikhaata)  (hatata)
+dono same source se!
+
+
+del obj[]
+------------------------------------
+>>> a={"rossom", "sarim", 3+5J, "ansari"}
+>>> print(a,type(a))
+{(3+5j), 'sarim', 'rossom', 'ansari'} <class 'set'>
+>>> del a[-1]
+Traceback (most recent call last):
+  File "<python-input-117>", line 1, in <module>
+    del a[-1]
+TypeError: 'set' object doesn't support item deletion
+
+>>> del a[0,2]
+Traceback (most recent call last):
+  File "<python-input-118>", line 1, in <module>
+    del a[0,2]
+TypeError: 'set' object does not support item deletion
+
+>>> del a
+>>> print(a)
+Traceback (most recent call last):
+  File "<python-input-120>", line 1, in <module>
+    print(a)
+NameError: name 'a' is not defined
+
+
+
+----------------------------------------------------------------------------------------
+
 
 
 
