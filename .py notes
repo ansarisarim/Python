@@ -3,6 +3,8 @@ Terms
 Item Assignment = Existing index pe value REPLACE karna
 Mutable   → Item Assignment ALLOWED   (List, Dict)
 Immutable → Item Assignment NOT ALLOWED
+Arbitrary = Random = Koi bhi ek (koi bhi ek, pata nahi kaunsa!)
+
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -1676,6 +1678,20 @@ KeyError: 5
 
 discard :- value rehegi to remove karega ni rehegi to ni karega but error ni dega and      
            remove value is teher to ye remove karega ni rehi to key eroor dega.(thats the only diffrence)
+
+.pop()
+----------------------
+>>> a={"rossom", "sarim", 3+5J, "ansari"}
+>>> print(a,type(a))
+{(3+5j), 'sarim', 'rossom', 'ansari'} <class 'set'>
+>>> a.pop()
+(3+5j)
+>>> a.pop()
+'sarim'
+>>> a.pop()
+'rossom'
+>>> a.pop()
+'ansari'
 
 
 
