@@ -1803,6 +1803,40 @@ True
 >>> a.issuperset(c)
 False
 
+obj1.issubset(obj2)
+>>> a={1, 2, 3, 4, 5}
+>>> b={1, 2, 3}
+>>> a.issuperset(b)
+True
+>>> c={1, 2, 3, 6}
+>>> a.issuperset(c)
+False
+>>> b.issubset(a)
+True
+>>> a.issubset(b)
+False
+
+most imp
+-------------
+>>> a={1, 2, 3, 4}
+>>> a.issuperset(a)
+True
+>>> a.issubset(a)
+True
+>>> set().issubset(set())
+True
+>>> set().issuperset(set())
+True
+>>> set().issuperset({1, 2, 3, 4})
+False
+>>> {1, 2, 3, 4}.issuperset({})
+True
+
+
+union()
+----------------
+
+
 
 
 
