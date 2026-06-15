@@ -1793,7 +1793,15 @@ True
 True
 
 
-
+obj(1).issuperset(obj2)
+-------------------------------------
+>>> a={1, 2, 3, 4, 5}
+>>> b={1, 2, 3}
+>>> a.issuperset(b)
+True
+>>> c={1, 2, 3, 6}
+>>> a.issuperset(c)
+False
 
 
 
