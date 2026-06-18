@@ -1917,6 +1917,23 @@ obj1.update(obj2)
 {1, 2, 3, 10, 20, 'apple', 'mango', 30}
 
 
+.copy()
+------------------------------------
+shalo copy
+
+>>> print(a,id(a))
+{1, 2, 3, 10, 20, 'apple', 'mango', 30} 2337010509952
+>>> b=a.copy()
+>>> print(b,id(b))
+{1, 2, 3, 10, 20, 'apple', 'mango', 30} 2337010511744
+>>> a.add("sarim")
+>>> b.add("ahfaz")
+>>> print(b,id(b))
+{1, 2, 3, 10, 'ahfaz', 20, 'apple', 'mango', 30} 2337010511744
+>>> print(a,id(a))
+{1, 2, 3, 10, 'sarim', 20, 'apple', 'mango', 30} 2337010509952
+
+
 
 
 
