@@ -1833,8 +1833,64 @@ False
 True
 
 
-union()
+union()   Combine + No duplicates
 ----------------
+>>> a={1, 2, 3,}
+>>> b={1, 2, 3, 4, 5, 6, 7}
+>>> c=a.union(b)
+>>> print(c)
+{1, 2, 3, 4, 5, 6, 7}
+
+obj.intersection()      Dono sets mein common  elements.
+------------------------------
+>>> d=a.intersection(b)
+>>> print(d)
+{1, 2, 3}
+
+.difference()
+------------------------------
+>>> b={1, 2, 3, 4, 5, 6, 7}
+>>> a={1, 2, 3,}
+>>> c=a.difference(b)     a.difference(b) = A ka woh hissa jo B mein nahi hai
+>>> print(c)
+set()
+>>> c=b.difference(a)
+>>> print(c)
+{4, 5, 6, 7}
+
+>>> a={1, 2, 5}
+>>> b={3, 4, 5}
+>>> c=a.difference(b)
+>>> print(c)
+{1, 2}
+>>> c=b.difference(a)
+>>> print(c)
+{3, 4}
+
+
+.difference_update
+------------------------------------------------------
+setobj1.difference_update(setobj2)
+>>> c=a.difference_update(b)
+>>> print(c)
+None
+>>> print(a)
+{20, 10}
+
+>>> a.difference_update(b)
+>>> print(a)
+{20, 10}
+
+obj1.symmetric_difference(obj2)
+>>> a={10, 20, 30, 70, 80}
+>>> b={10, 20, 30, 90, 100}
+>>> c=a.symmetric_difference(b)
+>>> print(c)
+{80, 100, 90, 70}
+
+
+
+
 
 
 
