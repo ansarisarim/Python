@@ -1890,6 +1890,33 @@ obj1.symmetric_difference(obj2)
 {80, 100, 90, 70}
 
 
+obj1.symmetric_difference_update(obj2
+-----------------------------------------------------)
+>>> c=a.symmetric_difference(b)
+>>> print(c)
+{80, 100, 70, 90, 60}
+>>> c=a.symmetric_difference_update(b)
+>>> print(c)
+None
+>>> print(a)
+{80, 100, 70, 90, 60}
+
+obj1.update(obj2)
+---------------------------------------
+>>> a={1, 2, 3}
+>>> b={"apple", "mango"}
+>>> a.update(b)
+>>> print(a)
+{1, 2, 3, 'apple', 'mango'}
+
+
+>>> a={1, 2, 3, "apple", "mango"}
+>>> b={1, 2, 10, 20, 30, "mango", "apple"}
+>>> a.update(b)
+>>> print(a)
+{1, 2, 3, 10, 20, 'apple', 'mango', 30}
+
+
 
 
 
