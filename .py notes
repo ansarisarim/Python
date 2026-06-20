@@ -1890,7 +1890,7 @@ obj1.symmetric_difference(obj2)
 {80, 100, 90, 70}
 
 
-obj1.symmetric_difference_update(obj2
+obj1.symmetric_difference_update(obj2      <---------- Dono ka unique combined
 -----------------------------------------------------)
 >>> c=a.symmetric_difference(b)
 >>> print(c)
@@ -1933,12 +1933,52 @@ shalo copy
 >>> print(a,id(a))
 {1, 2, 3, 10, 'sarim', 20, 'apple', 'mango', 30} 2337010509952
 
+-------------------------------------------------------------------------------------------------------
+practice questions
+-----------------
+
+1. Find players name who are plying  all the games?
+>>> print(cp)
+{'MS Dhoni', 'Virat Kohli', 'Rohit Sharma'}
+>>> print(tp)
+{'Rohan Bopanna', 'Sania Mirza', 'Leander Paes'}
+>>> allcptp=cp.union(tp)
+>>> print(allcptp)
+{'Sania Mirza', 'Rohit Sharma', 'Leander Paes', 'MS Dhoni', 'Virat Kohli', 'Rohan Bopanna'}
 
 
+2. Find players name who are playing both cricket and tennis?
+>>> cp = {"Virat Kohli", "Rohit Sharma", "MS Dhoni", "Rossom"}
+>>> tp = {"Sania Mirza", "Leander Paes", "Rohan Bopanna", "Rossom"}
+>>> bothcptp=cp.intersection(tp)
+>>> print(bothcptp)
+{'Rossom'}
 
 
+3. Find players name who are playing only cricket not tennis? 
+>>> print(cp)
+{'MS Dhoni', 'Virat Kohli', 'Rossom', 'Rohit Sharma'}
+>>> print(tp)
+{'Rossom', 'Rohan Bopanna', 'Sania Mirza', 'Leander Paes'}
+>>> onlycp=cp.difference(tp)
+>>> print(onlycp)
+{'MS Dhoni', 'Virat Kohli', 'Rohit Sharma'}
 
 
+4. Find players name who are playing only tennis not cricket?
+>>> print(cp)
+{'MS Dhoni', 'Virat Kohli', 'Rossom', 'Rohit Sharma'}
+>>> print(tp)
+{'Rossom', 'Rohan Bopanna', 'Sania Mirza', 'Leander Paes'}
+>>> onlytp=tp.difference(cp)
+>>> print(onlytp)
+{'Rohan Bopanna', 'Sania Mirza', 'Leander Paes'}
+
+
+5. Find players name who are playing exclusively cricket and tennis?
+>>> exclcptp=cp.symmetric_difference(tp)       <-------- Dono ka unique combined
+>>> print(exclcptp)
+{'Virat Kohli', 'Rohit Sharma', 'Sania Mirza', 'Leander Paes', 'MS Dhoni', 'Rohan Bopanna'}
 
 
 
