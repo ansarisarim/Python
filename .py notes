@@ -2025,5 +2025,41 @@ dict
 3
 
 
+>>> a={}
+>>> print(type(a))
+<class 'dict'>
+>>> b=dict()
+>>> print(type(b))
+<class 'dict'>
+
+
+>>> for index, value in enumerate(a):
+...     print(index, value)
+0 apple
+1 mango
+2 greps
+>>> for index, value in enumerate(a):
+...     print(index, value, a[value])
+0 apple 10
+1 mango 20
+2 greps 30
+>>> a["apple"]
+10
+>>> a["mango"]
+20
+
+
+KEY   = Change NAHI kar sakte! ❌
+VALUE = Change KAR sakte hain! ✅
+>>> a["apple"]
+10
+>>> a["apple"]="chiku"
+>>> print(a,type(a))
+{'apple': 'chiku', 'mango': 20, 'greps': 30} <class 'dict'>
+>>> a["apple"]="400"
+>>> print(a,type(a))
+{'apple': '400', 'mango': 20, 'greps': 30} <class 'dict'>
+
+
 
 
