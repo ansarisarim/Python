@@ -4,6 +4,7 @@ Item Assignment = Existing index pe value REPLACE karna
 Mutable   → Item Assignment ALLOWED   (List, Dict)
 Immutable → Item Assignment NOT ALLOWED
 Arbitrary = Random = Koi bhi ek (koi bhi ek, pata nahi kaunsa!)
+AttributeError = Wrong method on wrong data type.
 
 
 --------------------------------------------------------------------------------------------------------------------
@@ -1982,4 +1983,39 @@ practice questions
 
 
 
+
+frozenset
+----------------------------------
+>>> a={1, 2, 3}
+>>> print(a, type(a))
+{1, 2, 3} <class 'set'>
+>>> a.add(10)
+>>> print(a,type(a))
+{10, 1, 2, 3} <class 'set'>
+>>> b=frozenset(a)
+>>> print(b,type(b))
+frozenset({10, 1, 2, 3}) <class 'frozenset'>
+>>> b.add(10)
+Traceback (most recent call last):
+  File "<python-input-103>", line 1, in <module>
+    b.add(10)
+    ^^^^^
+AttributeError: 'frozenset' object has no attribute 'add'
+
+>>> b.discard(1)
+Traceback (most recent call last):
+  File "<python-input-106>", line 1, in <module>
+    b.discard(1)
+    ^^^^^^^^^
+AttributeError: 'frozenset' object has no attribute 'discard'
+
+dict
+----------------------------------
+
+>>> b={1:1.1, 1:1.2, 1:1.3, 1:1.4}
+>>> print(b,type(b))
+{1: 1.4} <class 'dict'>
+>>> c={1:20, 2:30, 3:40, 1:100}
+>>> print(c,type(c))
+{1: 100, 2: 30, 3: 40} <class 'dict'>
 
