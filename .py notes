@@ -2061,5 +2061,26 @@ VALUE = Change KAR sakte hain! ✅
 {'apple': '400', 'mango': 20, 'greps': 30} <class 'dict'>
 
 
+>>> print(a)
+{'AC1': 900, 'AC2': 900, 'AC3': 700, 200: 1000}
+>>> a["AC3"]=0
+>>> print(a)
+{'AC1': 900, 'AC2': 900, 'AC3': 0, 200: 1000}
+
+adding and changing on same address
+>>> a["address"]="Govandi"
+>>> print(a,id(a))
+{'AC1': 900, 'AC2': 900, 'AC3': 0, 200: 1000, 'AC9': 14380, 'address': 'Govandi'} 2208692734848
+>>> a["AC1"]=400
+>>> print(a,id(a))
+{'AC1': 400, 'AC2': 900, 'AC3': 0, 200: 1000, 'AC9': 14380, 'address': 'Govandi'} 2208692734848
+
+>>> a["AC1"]
+400
+>>> a["AC1"]=765
+>>> a["AC1"]
+765
+
+
 
 
