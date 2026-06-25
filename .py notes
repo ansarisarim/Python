@@ -2071,6 +2071,8 @@ adding and changing on same address
 >>> a["address"]="Govandi"
 >>> print(a,id(a))
 {'AC1': 900, 'AC2': 900, 'AC3': 0, 200: 1000, 'AC9': 14380, 'address': 'Govandi'} 2208692734848
+Add the key-vaue in dict
+----------------------------
 >>> a["AC1"]=400
 >>> print(a,id(a))
 {'AC1': 400, 'AC2': 900, 'AC3': 0, 200: 1000, 'AC9': 14380, 'address': 'Govandi'} 2208692734848
@@ -2081,6 +2083,31 @@ adding and changing on same address
 >>> a["AC1"]
 765
 
+.pop            <-----     remove the key-value from dict
 
+KEY   = Delete kar sakte hain ✅
+VALUE = Delete NAHI kar sakte ❌
+VALUE = Sirf MODIFY kar sakte hain
+-------------------------------
+>>> a.pop("AC3")
+0
+>>> a.pop("address")
+'Govandi'
+>>> print(a)
+{'AC1': 765, 'AC2': 900, 200: 1000, 'AC9': 14380, 'pincode': 400043}
+>>> a["id"]=TE000302     <---inserted entery
+>>> print(a)
+{'AC1': 765, 'AC2': 900, 200: 1000, 'AC9': 14380, 'pincode': 400043, 'id': TE000302}
+>>> a.pop("id")
+TE000302
+
+
+
+>>> a["id"]="TE000302"       <------------- inserted entery
+>>> print(a)
+{'AC1': 765, 'AC2': 900, 200: 1000, 'AC9': 14380, 'pincode': 400043, 'id': 'TE000302'}
+>>> a["id"]=000000             <-------------- modified entry
+>>> print(a)
+{'AC1': 765, 'AC2': 900, 200: 1000, 'AC9': 14380, 'pincode': 400043, 'id': 0}
 
 
