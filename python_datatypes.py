@@ -1,10 +1,14 @@
 --------------------------------------------------------Terms----------------------------------------------------------
 Terms
 Item Assignment = Existing index pe value REPLACE karna
-Mutable   → Item Assignment ALLOWED   (List, Dict)
-Immutable → Item Assignment NOT ALLOWED
 Arbitrary = Random = Koi bhi ek (koi bhi ek, pata nahi kaunsa!)
 AttributeError = Wrong method on wrong data type.
+Mutable   = Same object modify (same ID)
+Immutable = New object create  (new ID)
+Ordered   = Index maintained   (List, Tuple, Dict)
+Unordered = No index           (Set)
+Hashable  = Can be dict key    (Immutable types)
+Iterable  = Loop se traverse   (All collections)
 
 
 --------------------------------------------------------------------------------------------------------------------
