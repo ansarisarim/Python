@@ -1988,8 +1988,9 @@ practice questions
 
 
 
-frozenset
-----------------------------------
+
+---------------------------------------frozenset---------------------------------------------------
+
 >>> a={1, 2, 3}
 >>> print(a, type(a))
 {1, 2, 3} <class 'set'>
@@ -2013,9 +2014,10 @@ Traceback (most recent call last):
     ^^^^^^^^^
 AttributeError: 'frozenset' object has no attribute 'discard'
 
-dict
-----------------------------------
 
+----------------------------------------------------------------------------------------------------------
+                                              dict
+----------------------------------------------------------------------------------------------------------                                                                                         
 >>> b={1:1.1, 1:1.2, 1:1.3, 1:1.4}
 >>> print(b,type(b))
 {1: 1.4} <class 'dict'>
@@ -2093,25 +2095,96 @@ KEY   = Delete kar sakte hain ✅
 VALUE = Delete NAHI kar sakte ❌
 VALUE = Sirf MODIFY kar sakte hain
 -------------------------------
->>> a.pop("AC3")
-0
+>>> print(a,type(a),id(a))
+{'AC1': 765, 'AC2': 900, 200: 1000, 'AC9': 14380, 'pincode': 400043} <class 'dict'> 2043818791552
+
+>>> a["pincode"]=423203
+>>> print(a,type(a),id(a))
+{'AC1': 765, 'AC2': 900, 200: 1000, 'AC9': 14380, 'pincode': 423203} <class 'dict'> 2043818791552
+
+>>> a["address"]="mumai"
+>>> print(a,type(a),id(a))
+{'AC1': 765, 'AC2': 900, 200: 1000, 'AC9': 14380, 'pincode': 423203, 'address': 'mumai'} <class 'dict'> 2043818791552
+
+>>> a.pop("pincode")
+423203
 >>> a.pop("address")
-'Govandi'
+'mumai'
+>>> print(a,type(a),id(a))
+{'AC1': 765, 'AC2': 900, 200: 1000, 'AC9': 14380} <class 'dict'> 2043818791552
+
+>>> a.popitem()
+('AC9', 14380)
+>>> a.popitem()
+(200, 1000)
+>>> print(a,id(a))
+{'AC1': 765, 'AC2': 900} 2043818791552
+>>> a.popitem()
+('AC2', 900)
+>>> print(a,id(a))
+{'AC1': 765} 2043818791552
+>>> a.popitem()
+('AC1', 765)
+>>> print(a,id(a))
+{} 2043818791552
+
+
+ obj.clear()
+ ---------------------------------
+>>> a.clear()
+>>> print(a,type(a))
+{} <class 'dict'>
+
+>>> print({}.clear())
+None
+>>> print({}.clear())
+None
+>>> print(dict().clear())
+None
+
+
+.copy
+-------------
+shallow copy
 >>> print(a)
 {'AC1': 765, 'AC2': 900, 200: 1000, 'AC9': 14380, 'pincode': 400043}
->>> a["id"]=TE000302     <---inserted entery
+>>> b={"name":"sarim", "EMP-id":"TE000302"}
+>>> print(b)
+{'name': 'sarim', 'EMP-id': 'TE000302'}
+>>> a=b.copy()
 >>> print(a)
-{'AC1': 765, 'AC2': 900, 200: 1000, 'AC9': 14380, 'pincode': 400043, 'id': TE000302}
->>> a.pop("id")
-TE000302
+{'name': 'sarim', 'EMP-id': 'TE000302'}
+
+.get
+-------------------------------------------
+>>> print(a)
+{'name': 'sarim', 'EMP-id': 'TE000302'}
+>>> a.get("name")
+'sarim'
+>>> employname=a.get("name")
+>>> print(employname)
+sarim
+>>> a["employname"]
+sarim
 
 
 
->>> a["id"]="TE000302"       <------------- inserted entery
->>> print(a)
-{'AC1': 765, 'AC2': 900, 200: 1000, 'AC9': 14380, 'pincode': 400043, 'id': 'TE000302'}
->>> a["id"]=000000             <-------------- modified entry
->>> print(a)
-{'AC1': 765, 'AC2': 900, 200: 1000, 'AC9': 14380, 'pincode': 400043, 'id': 0}
+.keys()
+-------------------
+>>> print(bank)
+{'AC1': 765, 'AC2': 900, 200: 1000, 'AC9': 14380, 'pincode': 423203, 'address': 'mumai'}
+>>> bank_keys=bank.keys()
+>>> print(bank_keys)
+dict_keys(['AC1', 'AC2', 200, 'AC9', 'pincode', 'address'])
+
+
+>>> bank={'AC1': 765, 'AC2': 900, 200: 1000, 'AC9': 14380, 'pincode': 423203, 'address': 'mumai'}
+>>> values_bank=bank.values()
+>>> print(values_bank)
+dict_values([765, 900, 1000, 14380, 423203, 'mumai'])
+
+
+
+
 
 
