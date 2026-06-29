@@ -2183,8 +2183,81 @@ dict_keys(['AC1', 'AC2', 200, 'AC9', 'pincode', 'address'])
 >>> print(values_bank)
 dict_values([765, 900, 1000, 14380, 423203, 'mumai'])
 
+-------------------------------------------------------items()---------------------------------------------------------
+ items() 
+------------------------------------
+a={'AC1': 765, 'AC2': 900, 200: 1000, 'AC9': 14380, 'pincode': 400043}
+ >>> print(a.items())
+dict_items([('AC1', 765), ('AC2', 900), (200, 1000), ('AC9', 14380), ('pincode', 400043)])
+
+
+>>> for k,v in a.items():
+...     print(k,"------>",v)
+...
+AC1 ------> 765
+AC2 ------> 900
+200 ------> 1000
+AC9 ------> 14380
+pincode ------> 400043
+
+
+update()
+---------------------------------------
+
+update() =
+Same key → Value replace!
+New key  → Key-value add!
+
+>>> a={"name":"sarim", "surname":"ansari", "EMP-ID":"TE000302", 123:"abc", 567:"tru"}
+>>> b={"name":"ahfaz", "surname":"shaikh", "EMP-ID":"TE000111"}
+>>> b.update(a)
+>>> print(b)
+{'name': 'sarim', 'surname': 'ansari', 'EMP-ID': 'TE000302', 123: 'abc', 567: 'tru'}
 
 
 
+dict in dict  (inner-dict)
+----------------------------------
+>>> for key, value in b.items():
+...     print(key,"------>",value,"---->",type(b))
+
+name ------> ahfaz ----> <class 'dict'>
+surname ------> shaikh ----> <class 'dict'>
+ID ------> TE000111 ----> <class 'dict'>
+subject ------> {'maths': 20, 'science': 40, 'english': 70} ----> <class 'dict'>
+college-name ------> summaiya ----> <class 'dict'>
+
+
+
+>>> b.get("subject")             <-------------to get the inner dict
+{'maths': 20, 'science': 40, 'english': 70}
+
+>>> for key, value in b.get("subject").items():
+...     print(key,"--------------->",value)
+...
+maths ---------------> 20
+science ---------------> 40
+english ---------------> 70
+
+
+
+>>> print(b)
+{'name': 'ahfaz', 'surname': 'shaikh', 'ID': 'TE000111', 'subject': {'maths': 20, 'science': 40, 'english': 70}, 'college-name': 'summaiya'}
+>>> b["subject"]["science"]=100
+>>> print(b)
+{'name': 'ahfaz', 'surname': 'shaikh', 'ID': 'TE000111', 'subject': {'maths': 20, 'science': 100, 'english': 70}, 'college-name': 'summaiya'}
+>>> b["subject"]["english"]=100
+>>> print(b)
+{'name': 'ahfaz', 'surname': 'shaikh', 'ID': 'TE000111', 'subject': {'maths': 20, 'science': 100, 'english': 100}, 'college-name': 'summaiya'}
+
+>>> b.get("intsubject").get("science")
+40
+
+
+
+
+b["int-ext-mathsmarks"] = b["intsubject"]["maths"] + b["extsubject"]["maths"]
+>>> print(b)
+{'name': 'ahfaz', 'surname': 'shaikh', 'ID': 'TE000111', 'intsubject': {'maths': 20, 'science': 40, 'english': 70}, 'college-name': 'summaiya', 'extsubject': {'maths': 40, 'english': 70}, 'int-ext-mathsmarks': 60}
 
 
