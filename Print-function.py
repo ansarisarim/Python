@@ -75,5 +75,29 @@ my sno number is 10 and student name is rossom and marks is 7.9
 >>> print("my sno number is %d and student name is %s and marks is %f" % (sno, name, marks))
 my sno number is 10 and student name is rossom and marks is 7.900000
 
+>>> print("here is the date for lst1{} and data for lst2{}".format(lst1,lst2))
+here is the date for lst1[1, 2, 3, 'qw', 'ew'] and data for lst2[6, 7, 3, 'wq', 'esd']
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------
+#syntax 6
+
+>>> for val in range(40,100):
+...     print(val, end="-->")
+...
+40-->41-->42-->43-->44-->45-->46-->47-->48-->49-->50-->51-->52-->53-->54-->55-->56-->57-->58-->59-->60-->61-->62-->63-->64-->65-->66-->67-->68-->69-->70-->71-->72-->73-->74
+>>>
+
+>>> for val in range(40,100, 20):
+...     print(val, end="-->")
+...
+>>> >60-->80-->
+
+
+
+
 
 
