@@ -49,7 +49,7 @@ print("sum of", a, ",", b, "and", d, "is =", d)
 ---------------------------------------------------------------------------------------------------------------------
 #syntax 4
 --------------
-
+#dispying the value in formate function.
 >>> print("value of a=",(a))
 value of a= 10
 >>> print("vale of a={}".format(a))
@@ -69,6 +69,8 @@ data in lst1=[1, 2, 3, 'qw', 'ew'], data in lst2=[6, 7, 3, 'wq', 'esd']
 
 ----------------------------------------------------------------------------------------------------------------------
 #syntax 5
+-----------------------------
+dispaying the vale throung specifuer %
 >>> print("my sno number is {} and student name is {} and marks is {}".format(sno, name, marks))
 my sno number is 10 and student name is rossom and marks is 7.9
 
@@ -84,6 +86,7 @@ here is the date for lst1[1, 2, 3, 'qw', 'ew'] and data for lst2[6, 7, 3, 'wq', 
 
 ----------------------------------------------------------------------------------------------------------------------
 #syntax 6
+displying the data in same line.
 
 >>> for val in range(40,100):
 ...     print(val, end="-->")
