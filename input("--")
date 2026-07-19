@@ -1,0 +1,4 @@
+z="sarim"
+print("welcome mr {} please inter your pasword".format(z))
+b=input("-->")
+print("posword is incorrect")
