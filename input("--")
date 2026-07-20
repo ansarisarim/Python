@@ -2,3 +2,56 @@ z="sarim"
 print("welcome mr {} please inter your pasword".format(z))
 b=input("-->")
 print("posword is incorrect")
+
+-------------------------------------------------------------------------------
+
+print("welcome to the SIR form")
+b=input("inter your name ---> ")
+c=input("inter your city ---> ")
+print("your name is {} and your city is {}".format(b,c))
+
+-----------------------------------------------------------------------------------
+
+print("welcome to the SIR form")
+b=input("inter your name ---> ")
+c=input("inter your city ---> ")
+d=input("inter your role numbere ---> ")
+e=input("inter your 4th semester percentage(%) ---> ")
+
+x=str(b)
+y=str(c)
+z=int(d)
+q=int(e)
+
+print("your name is {} and your city is {} and your roll number {} yor percetage {}" .format(b,c,d,e))
+
+
+---------------------------------------------------------------------------------------------------
+
+print("=" * 40)
+print("   Welcome to the SIR Form")
+print("=" * 40)
+
+b = input("Enter your name        ---> ")
+c = input("Enter your city        ---> ")
+d = input("Enter your roll number ---> ")
+e = input("Enter your 4th semester percentage(%) ---> ")
+
+x = str(b)
+y = str(c)
+z = int(d)
+q = int(e)
+
+print("=" * 40)
+print("Your Details:")
+print("=" * 40)
+print("Your name       : {}".format(x))
+print("Your city       : {}".format(y))
+print("Your roll number: {}".format(z))
+print("Your percentage : {}%".format(q))
+print("=" * 40)
+
+---------------------------------------------------------------------------------------------------------------
+
+
+
