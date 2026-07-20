@@ -53,5 +53,35 @@ print("=" * 40)
 
 ---------------------------------------------------------------------------------------------------------------
 
+print("=" * 40)
+print("   Welcome to the SIR Form")
+print("=" * 40)
+
+x = str(input("Enter your name        ---> "))
+y = str(input("Enter your city        ---> "))
+z = int(input("Enter your roll number ---> "))
+q = int(input("Enter your 4th semester percentage(%) ---> "))
+
+print("=" * 40)
+print("Your Details:")
+print("=" * 40)
+print("Your name       : {}".format(x))
+print("Your city       : {}".format(y))
+print("Your roll number: {}".format(z))
+print("Your percentage : {}%".format(q))
+print("=" * 40)
+
+
+
+-----------------------------------------------------------------------------------------------
+a=input("Hi, whats is your name? ")
+print("welcome to the SPPU portal-->", a)
+b=str(input("please inter your full name as per Adhar card -->"))
+c=str(input("please inter your DOB-->"))
+d=str(input("please inter your Mobile Number-->"))
+print("name:-            {}".format(b))
+print("DOB is:-          {}".format(c))
+print("mobie number is:- {}".format(d))
+
 
 
