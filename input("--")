@@ -79,9 +79,13 @@ print("welcome to the SPPU portal-->", a)
 b=str(input("please inter your full name as per Adhar card -->"))
 c=str(input("please inter your DOB-->"))
 d=str(input("please inter your Mobile Number-->"))
-print("name:-            {}".format(b))
-print("DOB is:-          {}".format(c))
-print("mobie number is:- {}".format(d))
+print("-"*50)
+print("\t\tname:-            {}".format(b))
+print("\t\tDOB is:-          {}".format(c))
+print("\t\tmobie number is:- {}".format(d))
+print("-"*50)
+
+
 
 
 
