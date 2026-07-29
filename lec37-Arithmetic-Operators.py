@@ -58,11 +58,3 @@ print("\t expo {},{}={}".format(a,b, a**b))
 
 ------------------------------------------------------------------------------------------------
 
-Arithmetic Operators — Notes
-
-+  → Addition → a+b
--  → Subtraction → a-b
-*  → Multiplication → a*b
-/  → Division → a/b → hamesha float return karta hai (decimal)
-// → Floor Division → a//b → decimal ke baad ka part hata deta hai (round down)
-** → Exponent (power) → a**b → matlab a ka b power (a^b)
