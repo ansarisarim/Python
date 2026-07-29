@@ -17,3 +17,16 @@
 
 >>> print(a**b)
 1000
+
+
+--------------------------------------------------------------------------------------
+
+b=int(input("enter value of b "))
+print("*"*50)
+print("result of arithmetic operators")
+print("\t sum {},{} ={}".format(a,b,a+b))
+print("\t sub {},{} ={}".format(a,b, a-b))
+print("\t mul {},{} ={}".format(a,b, a*b))
+print("\t div {},{},={}".format(a, b, a/b))
+print("\t floordiv {},{}={}".format(a, b, a//b))
+print("\t expo {},{}={}".format(a,b, a**b))
