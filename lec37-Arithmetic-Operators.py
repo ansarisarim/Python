@@ -29,6 +29,12 @@ Arithmetic Operators — Notes
 >>> print(a**b)
 1000
 
+>>> print(10/3)
+3.3333333333333335
+>>> print(10%3)     % symbol dikhne me "percent" jaisa lagta hai, par Python me iska matlab
+     1              hai modulo — matlab division ke baad bacha hua remainder (baaki)
+
+
 --------------------------------------------------------------------------
 >>> print(10/3)
 3.3333333333333335
@@ -65,4 +71,9 @@ print("\t floordiv {},{}={}".format(a, b, a//b))
 print("\t expo {},{}={}".format(a,b, a**b))
 
 ------------------------------------------------------------------------------------------------
+Q. find out the square root of 20?
+a=20
+print(a**(1/3))
+
+
 
