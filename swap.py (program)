@@ -13,3 +13,13 @@ b=k
 print("_"*50)
 print("swap value of a: {}" .format(a))
 print("swap value of b: {}".format(b))
+
+-------------------------------------------------------------------------------------------------------
+second method
+>>> a,b=10,40
+>>> print(a,b)
+10 40
+>>> a,b=b,a
+>>> print(a,b)
+40 10
+>>>
