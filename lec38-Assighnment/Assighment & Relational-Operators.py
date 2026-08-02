@@ -7,6 +7,7 @@
 ------------------------------------------------------------------------------------------------------------
 
 # Multiline assighnment aperators.
+for assighning the RHS value to LHS
 >>> a,b=10,3
 >>> c,d,e,f=a+b,a/b,a-b,a*b
 >>> print(c)
