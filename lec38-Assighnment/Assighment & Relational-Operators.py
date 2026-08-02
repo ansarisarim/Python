@@ -19,3 +19,14 @@ for assighning the RHS value to LHS
 >>> print(f)
 30
 >>>
+
+
+-------------------------------------------------------------------------------------
+a,b=(input("inter the first number:" ), input("inter the second nu,ber:"))
+print("org value of a is {}" .format(a))
+print("org value of b is {}" .format(b))
+
+print("*"*50)
+a,b=b,a
+print("swap value of a:{}".format(a))
+print("swap value of b:{}".format(b))
