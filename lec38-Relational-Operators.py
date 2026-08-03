@@ -1,0 +1,17 @@
+Operator	Meaning	True Example	False Example	
+#ERROR!	Equal to	5 == 5  →  True	5 == 3  →  False	
+!=	Not equal to	5 != 3  →  True	5 != 5  →  False	
+>	Greater than	10 > 5  →  True	5 > 10  →  False	
+<	Less than	3 < 8  →  True	8 < 3  →  False	
+>=	Greater than or equal to	5 >= 5  →  True	4 >= 5  →  False	
+<=	Less than or equal to	4 <= 7  →  True	8 <= 7  →  False	
+
+
+  
+>>> "wow">="woW"
+True
+>>> ord("w")
+119
+>>> ord("W")
+87
+-------------------
