@@ -30,3 +30,13 @@ print("*"*50)
 a,b=b,a
 print("swap value of a:{}".format(a))
 print("swap value of b:{}".format(b))
+
+-------------------------------------------------------------------------------------
+a,b=(float(input("inter the value of a: ")), float(input("inter the value of b: ")))
+print("*"*50)
+print("orignal value of a {}".format(a))
+print("orignal value of b {}".format(b))
+a,b=b,a
+print("*"*50)
+print("swap value of a is {}".format(a))
+print("swap value of b is {}".format(b))
