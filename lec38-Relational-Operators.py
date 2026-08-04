@@ -15,3 +15,6 @@ True
 >>> ord("W")
 87
 -------------------
+
+Q. Write a python program which demonstare the consecpt of relational operators?
+
