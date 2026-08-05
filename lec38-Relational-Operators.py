@@ -18,3 +18,15 @@ True
 
 Q. Write a python program which demonstare the consecpt of relational operators?
 
+a=int(input("inter your first value "))
+b=int(input("inter your second value "))
+
+print("-"*50)
+
+print("\t \t {} >= {} =  {}".format(a,b, a >= b ))
+print("\t \t {} >= {} =  {}".format(a,b , a <= b))
+print("\t \t {} == {} =  {}".format(a,b,a==b))
+print("\t\t {} != {}  =  {}".format(a,b,a!=b))
+print("\t\t {} > {}   =  {}".format(a,b,a>b))
+print("\t\t {} < {}   =  {}".format(a,b,a<b))
+
