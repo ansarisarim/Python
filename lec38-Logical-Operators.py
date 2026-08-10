@@ -21,3 +21,7 @@ Definition:
 "In AND operator, if the first condition is False, Python stops checking remaining conditions and 
 directly returns False. This is called Short Circuit Evaluation. If all conditions are True, Python checks every
 condition, called Full Length Evaluation."
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+2) "or" Operator
+--------------------------------
