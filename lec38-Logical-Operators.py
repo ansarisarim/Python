@@ -34,6 +34,15 @@ condition, called Full Length Evaluation."
 3) "not" Operator
 --------------------------------
 
+>>> not False
+True
+>>> not True
+False
+>>> not 0
+True
+>>> not 1
+False
+
 
 
 OR  = Pehli TRUE mili  → STOP! → TRUE
