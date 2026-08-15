@@ -2,6 +2,9 @@ Definition:
 
 
 # logical operators is to combaine two or more relational expressions. 
+OR  = Pehli TRUE mili  → STOP! → TRUE
+AND = Pehli FALSE mili → STOP! → FALSE
+NOT = True ko False, False ko True bana deta hai
 
 1) "and" Operator
 --------------------------------
@@ -37,24 +40,17 @@ condition, called Full Length Evaluation."
 3) "not" Operator
 --------------------------------
 
->>> not False
-True
->>> not True
-False
->>> not 0
-True
->>> not 1
-False
+>>> not False................True
+>>> not True.................False
+>>> not 0....................True
+>>> not 1....................False
 
->>> not str(10-10)
-False    <-----"0"
+>>> not str(10-10).......................False    <-----"0"
 >>> str(0)
 '0'
 
->>> not str(10-10)
-False
->>> str(0)
-'0'
+>>> not str(10-10).......................False
+>>> str(0)................................'0'
 
 
 
@@ -75,11 +71,6 @@ not [1,2,3]     # False (non-empty → True → not → False)
 
 # None
 not None        # True  (None → False → not → True)
-
-
-
-OR  = Pehli TRUE mili  → STOP! → TRUE
-AND = Pehli FALSE mili → STOP! → FALSE
 
 
 --------------------------------------------------------------------------------------------------
