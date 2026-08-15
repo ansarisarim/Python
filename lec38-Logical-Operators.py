@@ -114,3 +114,11 @@ note: and is preferable then or (firt we solve and then or)
 
 >>> "Easy" or "complex" and "very complex" or "python" and "jave"
 'Easy'
+
+
+
+---------------------------------------------------------------------------------------------
+and → last True tak jaata hai
+or → pehli True pe ruk jaata hai
+>>> 10 or 90 or 0 or 40................10
+>>> 0 or 0 or 0 or 40...................40
