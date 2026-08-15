@@ -106,3 +106,11 @@ special point ....."or"  (or → Pehla True mile toh wahi return, warna last val
 True
 >>> False or False or True
 True
+
+----------------------------------------------------------------------------------------------------------------
+4) combination of "and" & "or"
+------------------------------------
+note: and is preferable then or (firt we solve and then or)
+
+>>> "Easy" or "complex" and "very complex" or "python" and "jave"
+'Easy'
