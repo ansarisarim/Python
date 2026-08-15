@@ -116,6 +116,22 @@ note: and is preferable then or (firt we solve and then or)
 'Easy'
 
 
+5) combination of "and" "or" & "not"
+100 and 200 or not "python" or not "java" and "Not"
+200 or False or False and "Not"
+200 or False or False 
+200
+
+>>> 100 and 200 or not "python" or not "java" and "Not"
+200
+
+>>> not ("good" and "better" or "best" or "poor" and "amazing")
+False
+
+not ("good" and "better" or "best" or "poor" and "amazing") and "false"
+not ("better") and "false"
+False and "false" 
+False  <--answer
 
 ---------------------------------------------------------------------------------------------
 and → last True tak jaata hai
