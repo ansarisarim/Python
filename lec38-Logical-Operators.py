@@ -1,3 +1,6 @@
+Definition:
+
+
 # logical operators is to combaine two or more relational expressions. 
 
 1) "and" Operator
@@ -43,7 +46,72 @@ True
 >>> not 1
 False
 
+>>> not str(10-10)
+False    <-----"0"
+>>> str(0)
+'0'
+
+>>> not str(10-10)
+False
+>>> str(0)
+'0'
+
+
+
+
+# Strings
+not "hello"     # False (non-empty → True → not → False)
+not ""          # True  (empty → False → not → True)
+not " "         # False (space bhi non-empty!)
+
+# Numbers
+not 0           # True  (0 → False → not → True)
+not 1           # False (1 → True  → not → False)
+not 5           # False (any number → True → not → False)
+
+# List
+not []          # True  (empty list → False → not → True)
+not [1,2,3]     # False (non-empty → True → not → False)
+
+# None
+not None        # True  (None → False → not → True)
+
 
 
 OR  = Pehli TRUE mili  → STOP! → TRUE
 AND = Pehli FALSE mili → STOP! → FALSE
+
+
+--------------------------------------------------------------------------------------------------
+special point ....."and"    (and → Pehla False mile toh wahi return, warna last value return)
+>>> 10 and 500
+500
+>>> 0 and 500
+0
+
+>>> 234 and 10-10 and 43
+0
+
+>>> True and True and False
+False
+
+>>> False and True and True
+False
+
+>>> "java" and "python" and "data science"
+'data science'
+
+
+--------------------------------------------------------------------------------------------------
+special point ....."or"  (or → Pehla True mile toh wahi return, warna last value return)
+
+>>> 100 or 100
+100
+>>> 100 or 2
+100
+>>> 0 or 2
+2
+>>> True or False or False
+True
+>>> False or False or True
+True
