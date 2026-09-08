@@ -1,1 +1,41 @@
+>>> bin(255)
+'0b11111111'
+>>> a=255
+>>> b=3
+bin(a<<b)
+'0b11111111000'
 
+>>> b=7
+>>> bin(a<<b)
+'0b111111110000000'
+
+note: there is one small formula is there to calcilate left shift operator int value
+Givenvalue × 2^(number of bits shifted)
+
+
+>>> a=50
+>>> print(a<<3)
+400
+-----------------------------
+>>> a=50.5
+>>> print(a<<3)
+Traceback (most recent call last):
+  File "<python-input-20>", line 1, in <module>
+    print(a<<3)
+-------------------------------
+          
+TypeError: unsupported operand type(s) for <<: 'float' and 'int'
+>>> a=50.0
+>>> print(a<<3)
+Traceback (most recent call last):
+  File "<python-input-22>", line 1, in <module>
+    print(a<<3)
+          
+TypeError: unsupported operand type(s) for <<: 'float' and 'int'
+----------------------------------
+>>> print(a<<-3)
+Traceback (most recent call last):
+  File "<python-input-23>", line 1, in <module>
+    print(a<<-3)
+          ~^^~~
+TypeError: unsupported operand type(s) for <<: 'float' and 'int'
