@@ -60,6 +60,21 @@ True
 False
 
 -----------------------------------------------------------------------------
+>>> {} and {0, 50, 80}
+{}
+
+
+>>> {} and {0, 50, 80}
+{}
+>>> {} & {0, 50, 80}
+Traceback (most recent call last):
+  File "<python-input-106>", line 1, in <module>
+    {} & {0, 50, 80}
+    
+TypeError: unsupported operand type(s) for &: 'dict' and 'set'
+>>> {1, 50,4} & {0, 50, 80}
+{50}
+
 
 
 
