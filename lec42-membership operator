@@ -117,3 +117,13 @@ Traceback (most recent call last):
   File "<python-input-195>", line 1, in <module>
     4+5j in a[-2]
 TypeError: argument of type 'complex' is not a container or iterable
+
+---------------------------------------------------------------------------------------------------------------
+
+>>> d1={10:"apple", 20:"mango", 30:"kiwi"}
+>>> print(d1,type(d1))
+{10: 'apple', 20: 'mango', 30: 'kiwi'} <class 'dict'>
+>>> "apple" in d1
+False
+>>> 10 in d1
+True
