@@ -69,3 +69,21 @@ True
 "Ross" in a        → False   (List pe chal raha hai → exact element nahi hai)
 "Rossum" in a      → True    (List pe chal raha hai → exact element hai)
 "Ross" in a[1]     → True    (String pe chal raha hai → "Rossum" ke andar "Ross" hai)
+
+
+-----------------------------------------------------------------------------------------------------------
+>>> lst=[2.3, 5, "sarim", 5+3j]
+>>> print(lst,type(lst))
+[2.3, 5, 'sarim', (5+3j)] <class 'list'>
+>>> 5+3j in lst
+True
+>>> 5+3j in lst[-1]
+Traceback (most recent call last):
+  File "<python-input-182>", line 1, in <module>
+    5+3j in lst[-1]
+TypeError: argument of type 'complex' is not a container or iterable
+
+in sirf list, string, tuple, set, dict jaise containers pe chalta hai
+int, float, complex pe in nahi chalata
+
+Isliye lst[-1] (complex) pe error aa gaya.
