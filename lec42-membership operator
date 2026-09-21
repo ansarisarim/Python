@@ -8,6 +8,13 @@ Membership operators (in, not in) work only on iterable objects (string, list, t
 {"name": "x"}    # Dict     (multiple keys!)
 range(10)        # Range    (multiple numbers!)
 
+Membership Operator (in / not in) ka Logic:
+Yeh operator andar ghum ke check karta hai ki koi value maujood hai ya nahi.
+Iske liye object ke andar ke elements pe jaana zaroori hota hai.
+
+Logical Reason:
+List, String, Tuple, Set, Dict --> Kai elements hote hain   --> Ghúm sakte ho → in chalta hai 
+int, float, complex, bool  --> Sirf ek single value hota hai --> Andar kuch nahi → in nahi chalta 
 
 s = "sarim"
 >>> "s"  in s
@@ -83,7 +90,30 @@ Traceback (most recent call last):
     5+3j in lst[-1]
 TypeError: argument of type 'complex' is not a container or iterable
 
-in sirf list, string, tuple, set, dict jaise containers pe chalta hai
-int, float, complex pe in nahi chalata
-
+(in sirf list, string, tuple, set, dict jaise containers pe chalta hai
+int, float, complex pe in nahi chalata Isliye lst[-1] (complex) pe error aa gaya.)
 Isliye lst[-1] (complex) pe error aa gaya.
+
+
+
+>>> "mir" in lst[-2]
+False
+
+>>> print("mir" in lst[-2][::-1])
+True
+
+
+---------------------------------------------------------------------------------------------------------------
+>>> a=[2, 4.4, 4+5j, "abc"]
+>>> 4+5j not in a
+False
+>>> 4+5j not in a[-2]
+Traceback (most recent call last):
+  File "<python-input-194>", line 1, in <module>
+    4+5j not in a[-2]
+TypeError: argument of type 'complex' is not a container or iterable
+>>> 4+5j in a[-2]
+Traceback (most recent call last):
+  File "<python-input-195>", line 1, in <module>
+    4+5j in a[-2]
+TypeError: argument of type 'complex' is not a container or iterable
