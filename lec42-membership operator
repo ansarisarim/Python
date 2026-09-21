@@ -123,7 +123,9 @@ TypeError: argument of type 'complex' is not a container or iterable
 >>> d1={10:"apple", 20:"mango", 30:"kiwi"}
 >>> print(d1,type(d1))
 {10: 'apple', 20: 'mango', 30: 'kiwi'} <class 'dict'>
->>> "apple" in d1
+>>> "apple" in d1      <==== it prefer the key 
 False
+>>> "apple" in d1.values()     <==== want to prefer the value have to mention
+True
 >>> 10 in d1
 True
