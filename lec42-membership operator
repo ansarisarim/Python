@@ -7,3 +7,65 @@ Membership operators (in, not in) work only on iterable objects (string, list, t
 {1, 2, 3}        # Set      (multiple values!)
 {"name": "x"}    # Dict     (multiple keys!)
 range(10)        # Range    (multiple numbers!)
+
+
+s = "sarim"
+>>> "s"  in s
+True
+>>> "s" not in s
+False
+-------------------------------------------
+>>> a="PYTHON"
+>>> "HON" in a
+True
+>>> "HON" not in a
+False
+>>> "ABC" not in a
+True
+>>> "ABC" in a
+False
+>>>
+
+-----------------------------------------------------
+
+>>> a="PYTHON"
+>>> "PYTN" in a     (Sequence + Continuous dono zaroori hain)
+False
+>>> "PYTN" not in a
+True
+
+>>> "PYT" in a
+True
+>>> "TYP" in a
+False
+
+-----------------------------------------------------
+>>> a="PYTHON"
+>>> "PYT" in a [1:4:1]
+False
+>>> "PYT" in a [0:4:1]
+True
+>>> "PTO" in a [0:6:2]
+True
+>>> "NOH" in a [0:6:-1]
+False
+>>> "NOH" in a [-1::-1]
+True
+>>> "NHY" in a [-1::-2]
+True
+>>> "OTP" in a [-2::-2]
+True
+
+
+-----------------------------------------------------------------------------------------------------------
+>>> a=[10, "Rossum", 3.5, 3+5j]
+>>> "Ross" in a
+False
+>>> "Rossum" in a
+True
+>>> "Ross" in a[1]
+True
+
+"Ross" in a        → False   (List pe chal raha hai → exact element nahi hai)
+"Rossum" in a      → True    (List pe chal raha hai → exact element hai)
+"Ross" in a[1]     → True    (String pe chal raha hai → "Rossum" ke andar "Ross" hai)
