@@ -1,0 +1,8 @@
+# ✅ Membership operator chalta hai
+
+"Sarim"          # String   (multiple chars!)
+[1, 2, 3]        # List     (multiple values!)
+(1, 2, 3)        # Tuple    (multiple values!)
+{1, 2, 3}        # Set      (multiple values!)
+{"name": "x"}    # Dict     (multiple keys!)
+range(10)        # Range    (multiple numbers!)
