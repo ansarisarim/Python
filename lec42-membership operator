@@ -1,3 +1,4 @@
+Membership operators (in, not in) work only on iterable objects (string, list, tuple, set, dict, range) that contain multiple values, and always return True or False
 # ✅ Membership operator chalta hai
 
 "Sarim"          # String   (multiple chars!)
