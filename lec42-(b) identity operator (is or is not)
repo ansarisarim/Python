@@ -1,0 +1,72 @@
+deep copy
+>>> lst1=[1, 2, 3]
+>>> lst2=lst1
+>>> print(lst1,id(lst1))
+[1, 2, 3] 2903699291264
+>>> print(lst2,id(lst2))
+[1, 2, 3] 2903699291264
+>>> lst1 is lst2
+True
+
+shalow copy
+>>> lst1=[1, 2, 3]
+>>> lst2=lst1.copy()
+>>> print(lst1,id(lst1))
+[1, 2, 3] 2903699442112
+>>> print(lst2,id(lst2))
+[1, 2, 3] 2903699440320
+
+NOTE: for all the deep copy object is operator returns true.
+
+None data type
+--------------------------------
+>>> a=None
+>>> b=None
+>>> print(a,type(a),id(a))
+None <class 'NoneType'> 140734987553600
+>>> print(b,type(b),id(b))                        ( None is havinge same adress becoz its a keyword )
+None <class 'NoneType'> 140734987553600
+>>> a is b
+True
+>>> a is not b
+False
+
+Dictonar data type
+--------------------------------
+>>> d1={10:"apple", 30:"mango"}
+>>> d2={10:"apple", 30:"mango"}
+>>> print(d1,type(d1),id(d1))
+{10: 'apple', 30: 'mango'} <class 'dict'> 2903699197120
+>>> print(d2,type(d2),id(d2))
+{10: 'apple', 30: 'mango'} <class 'dict'> 2903699198272
+>>> d1 is d2
+False
+>>> d1 is not  d2
+True
+
+
+
+set data type
+--------------------------------
+>>> s1={1, 2, 3, 4}
+>>> s2={1, 2, 3, 4}
+>>> print(s1,type(s1),id(s1))
+{1, 2, 3, 4} <class 'set'> 2903698664224
+>>> print(s2,type(s2),id(s2))
+{1, 2, 3, 4} <class 'set'> 2903698663776
+>>> s1 is s2
+False
+>>> s1=s2
+>>> s1 is s2
+True
+
+
+frozenset
+--------------------------------
+>>> s2=frozenset({1, 2, 3, 4})
+>>> s1=frozenset({1, 2, 3, 4})
+>>> s1 is s2
+False
+>>> s1=s2
+>>> s1 is s2
+True
