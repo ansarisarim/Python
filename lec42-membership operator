@@ -129,3 +129,19 @@ False
 True
 >>> 10 in d1
 True
+
+---------------------------------------------------------------------------------------------------------------
+>>> a={"a", "e", "i", "n", "u"}
+>>> print(a,type(a))
+{'u', 'a', 'i', 'n', 'e'} <class 'set'>
+>>> "a" in a
+True
+>>> "a" in {"a", "e", "i", "n", "u"}
+True
+>>> {"a", "e"} in {"a", "e", "i", "n", "u"}      <-- its false becz set does not mantain order it can be true 
+False
+
+>>> a ={"a", "e"}
+>>> b={"a", "e", "i", "n", "u"}
+>>> a in b
+False
