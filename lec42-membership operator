@@ -138,10 +138,24 @@ True
 True
 >>> "a" in {"a", "e", "i", "n", "u"}
 True
->>> {"a", "e"} in {"a", "e", "i", "n", "u"}      <-- its false becz set does not mantain order it can be true 
+>>> {"a", "e"} in {"a", "e", "i", "n", "u"}      <-- its false becz set does not mantain order but it can be true  (its consider as bugs)
 False
 
 >>> a ={"a", "e"}
 >>> b={"a", "e", "i", "n", "u"}
 >>> a in b
 False
+---------------------------------------------------------------------------------------------------------------------
+
+>>> a=[1, 2, 3]
+>>> print(a,type(a))
+[1, 2, 3] <class 'list'>
+>>> [1, 2] in a
+False
+
+>>> [1, 2] in a [::]
+False
+
+>>> a=[[1, 2], 3]
+>>> [1, 2] in a
+True
