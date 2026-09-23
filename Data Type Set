@@ -1,0 +1,510 @@
+set category data type
+
+>>> a={"a", "b", "c"}
+>>> print(a,type(a))
+{'b', 'a', 'c'} <class 'set'>
+>>> print(a,type(a))
+{'b', 'a', 'c'} <class 'set'>
+
+Note: indexing and slicing can not perform on set bcoz set does not maintain insertion order so no slicing and indexing can be performed.
+>>> a[2]
+Traceback (most recent call last):
+  File "<python-input-15>", line 1, in <module>
+    a[2]
+TypeError: 'set' object is not subscriptable
+
+
+>>> a[0:2]
+Traceback (most recent call last):
+  File "<python-input-16>", line 1, in <module>
+    a[0:2]
+TypeError: 'set' object is not subscriptable
+
+
+# LIST - ORDERED hai
+lst = [1, 2, 3]
+lst.append(4)
+print(lst)      # [1, 2, 3, 4]   Order maintain hota hai
+# append() = "END mein add karo" End ka concept sirf ORDERED cheez mein hota hai
+
+# SET - UNORDERED hai  thats why its does not support append or insert.
+s = {1, 2, 3}
+s.add(4)
+print(s)        # {1, 2, 3, 4} (order random!)    Koi fixed position nahi!
+
+
+>>> print(a,type(a), id(a))
+{'b', 'a', 'd', 'c'} <class 'set'> 2922791132448
+>>> a.add("e")
+>>> print(a,type(a), id(a))
+{'c', 'b', 'e', 'a', 'd'} <class 'set'> 2922791132448
+
+
+>>> a=()
+>>> print(type(a))
+<class 'tuple'>
+
+>>> b=[]
+>>> print(b,type(b))
+[] <class 'list'>
+
+>>> c={}    <--- we can not creat set like that   compalsory question.
+>>> print(c,type(c))
+{} <class 'dict'>       <-- its dict not set 
+
+
+
+>>> a=list()
+>>> print(a,type(a))
+[] <class 'list'>
+
+>>> b=tuple()
+>>> print(b,type(b))
+() <class 'tuple'>
+
+>>> c=set()    <----- only way to create empty set
+>>> print(c,type(c))
+set() <class 'set'>
+
+
+Q. How do you remove dublicate element from list.
+>>> a=[1, 2, 3, 4, 5, 5, 4, 3, 2, 1]
+>>> print(a, type(a), len(a))
+[1, 2, 3, 4, 5, 5, 4, 3, 2, 1] <class 'list'> 10
+>>> b=set(a)
+>>> print(b,type(b),len(b))
+{1, 2, 3, 4, 5} <class 'set'> 5
+
+- remove duplicate fron str
+>>> a="mississipi"
+>>> print(a,type(a),len(a))
+mississipi <class 'str'> 10
+b=set(a)
+>>> print(b,type(b),len(b))
+{'i', 'p', 's', 'm'} <class 'set'> 4
+
+- remove duplicate from tuple
+>>> a=(12, 34, 43, 21, 12, 43, 21)
+>>> print(a,type(a),len(a))
+(12, 34, 43, 21, 12, 43, 21) <class 'tuple'> 7
+>>> b=set(a)
+>>> print(b,type(b),len(b))
+{34, 43, 12, 21} <class 'set'> 4
+
+syntax2=
+obj=set()
+>>> a=set((12, 32, 12, 32, 12))        
+>>> print(a,type(a))
+{32, 12} <class 'set'>
+>>> b=set([12, 32, 12, 32, 12])
+>>> print(b,type(b))
+{32, 12} <class 'set'>
+
+
+>>> a=10
+>>> print(a,len(a))
+Traceback (most recent call last):
+  File "<python-input-88>", line 1, in <module>
+    print(a,len(a))          
+TypeError: object of type 'int' has no len()       <---fundamental type doesn't have len because it only have one value to know it we hae to convert it.
+
+>>> b=([a])
+>>> print(b,type(b),len(b))
+[10] <class 'list'> 1
+
+>>> a=10
+>>> b=[a]
+>>> print(b,type(b),len(b))
+[10] <class 'list'> 1
+
+- have to remember it.
+>>> a=(12)
+>>> print(a,type(a))
+12 <class 'int'>
+>>> a=(12,)    <----- ,is important
+>>> print(a,type(a))
+(12,) <class 'tuple'>
+
+
+
+>>> a=10
+>>> type(a)
+<class 'int'>
+>>> a=(10)
+>>> type(a)
+<class 'int'>
+>>> a=(10,)
+>>> type(a)
+<class 'tuple'>
+>>> a={10}
+>>> type(a)
+<class 'set'>
+>>> a=[10]
+>>> type(a)
+<class 'list'>
+
+
+obj.add()        <--- adding the data in any order.
+>>> print(a)
+{'hgi', 'def', 'abc'}
+>>> a.add("dsds")
+>>> print(a,type(a))
+{'dsds', 'hgi', 'def', 'abc'} <class 'set'>
+
+
+obj.clear
+
+>>> print(a,type(a))                                                         
+{'dsds', 'hgi', 'def', 'abc'} <class 'set'>
+>>> print(a,type(a),id(a))
+{'dsds', 'hgi', 'def', 'abc'} <class 'set'> 1916749244544
+
+>>> a.clear()
+>>> print(a,type(a),id(a))
+set() <class 'set'> 1916749244544
+
+clear() = Sirf VALUES delete karta hai
+          OBJECT delete nahi hota!
+          MEMORY free nahi hoti!
+          
+Same ID = Same object memory mein hai
+          Bas andar ka data empty ho gaya!
+
+MUTABLE   → ID same rehta jab tak del na karo
+IMMUTABLE → Value change = New ID
+Both      → del karo = ID gone!
+
+
+>>> a={10, 20, 30, 40, 50}
+>>> print(a,type(a),id(a))
+{50, 20, 40, 10, 30} <class 'set'> 1916749243648
+>>> a.remove(10)
+>>> a.remove(20)
+>>> print(a,type(a),id(a))
+{50, 40, 30} <class 'set'> 1916749243648
+
+>>> a.remove(100)
+Traceback (most recent call last):
+  File "<python-input-50>", line 1, in <module>
+    a.remove(100)
+    ~~~~~~~~^^^^^
+KeyError: 100                     <--- in set if that spesific value is not there we got keyError because in set every value is unique so set treat the value as a key
+                                        id same thing in list so we got value Error
+
+
+Discard
+----------------------
+
+s = {1, 2, 3, 4,}
+
+>>> a.discard(5)
+>>> a.remove(5)
+Traceback (most recent call last):
+  File "<python-input-31>", line 1, in <module>
+    a.remove(5)
+    ~~~~~~~~^^^
+KeyError: 5
+
+discard :- value rehegi to remove karega ni rehegi to ni karega but error ni dega and      
+           remove value is teher to ye remove karega ni rehi to key eroor dega.(thats the only diffrence)
+
+.pop()
+----------------------
+>>> a={"rossom", "sarim", 3+5J, "ansari"}
+>>> print(a,type(a))
+{(3+5j), 'sarim', 'rossom', 'ansari'} <class 'set'>
+>>> a.pop()
+(3+5j)
+>>> a.pop()
+'sarim'
+>>> a.pop()
+'rossom'
+>>> a.pop()
+'ansari'
+
+>>> a.pop()
+Traceback (most recent call last):
+  File "<python-input-93>", line 1, in <module>
+    a.pop()
+    ~~~~~^^
+KeyError: pop from an empty set                  <-------- there is no key found to remove so its keyerror no value error or non
+
+
+Q. print ke bad first value pop karta hai or print ke pehle random value pop karta hai what the logic?
+>>> a={"rossom", "sarim", 3+5J, "ansari"}
+>>> a.pop()
+(3+5j)
+>>> a.pop()
+'sarim'
+>>> a.pop()
+'rossom'
+>>> a.pop()
+'ansari'
+>>> a.pop()
+Traceback (most recent call last):
+  File "<python-input-106>", line 1, in <module>
+    a.pop()
+    ~~~~~^^
+KeyError: 'pop from an empty set'
+>>> a={"rossom", "sarim", 3+5J, "ansari"}
+>>> print(a,type(a))
+{(3+5j), 'sarim', 'rossom', 'ansari'} <class 'set'>
+>>> a.pop()
+(3+5j)
+>>> a.pop()
+'sarim'
+>>> a.pop()
+'rossom'
+>>> a.pop()
+'ansari'
+>>> a.pop()
+Traceback (most recent call last):
+  File "<python-input-113>", line 1, in <module>
+    a.pop()
+    ~~~~~^^
+KeyError: 'pop from an empty set'
+
+SET internally HASH TABLE use karta hai.
+
+print() → Hash order mein dikhata hai
+pop()   → Hash order mein remove karta hai
+
+Dono ka source = Same HASH TABLE!
+Isliye dono ka order same lagta hai!
+
+print()    pop()
+(dikhaata)  (hatata)
+dono same source se!
+
+
+del obj[]
+------------------------------------
+>>> a={"rossom", "sarim", 3+5J, "ansari"}
+>>> print(a,type(a))
+{(3+5j), 'sarim', 'rossom', 'ansari'} <class 'set'>
+>>> del a[-1]
+Traceback (most recent call last):
+  File "<python-input-117>", line 1, in <module>
+    del a[-1]
+TypeError: 'set' object doesn't support item deletion
+
+>>> del a[0,2]
+Traceback (most recent call last):
+  File "<python-input-118>", line 1, in <module>
+    del a[0,2]
+TypeError: 'set' object does not support item deletion
+
+>>> del a
+>>> print(a)
+Traceback (most recent call last):
+  File "<python-input-120>", line 1, in <module>
+    print(a)
+NameError: name 'a' is not defined
+
+----------------------------------------------------------------------------------------
+obj1.isdisjoint(obj2)
+Common NAHI = True  
+Common HAI  = False
+
+>>> a={1, 2, 3, 4}
+>>> b={5, 6, 7, 8}
+>>> c={1, 2, 7, 8}
+>>> a.isdisjoint(b)
+True
+>>> a.isdisjoint(c)
+False
+>>> b.isdisjoint(c)
+False
+>>> b.isdisjoint(a)
+True
+
+>>> {1, 2, 3, 4}.isdisjoint(set())
+True
+
+
+obj(1).issuperset(obj2)
+-------------------------------------
+>>> a={1, 2, 3, 4, 5}
+>>> b={1, 2, 3}
+>>> a.issuperset(b)
+True
+>>> c={1, 2, 3, 6}
+>>> a.issuperset(c)
+False
+
+obj1.issubset(obj2)
+>>> a={1, 2, 3, 4, 5}
+>>> b={1, 2, 3}
+>>> a.issuperset(b)
+True
+>>> c={1, 2, 3, 6}
+>>> a.issuperset(c)
+False
+>>> b.issubset(a)
+True
+>>> a.issubset(b)
+False
+
+most imp
+-------------
+>>> a={1, 2, 3, 4}
+>>> a.issuperset(a)
+True
+>>> a.issubset(a)
+True
+>>> set().issubset(set())
+True
+>>> set().issuperset(set())
+True
+>>> set().issuperset({1, 2, 3, 4})
+False
+>>> {1, 2, 3, 4}.issuperset({})
+True
+
+
+union()   Combine + No duplicates
+----------------
+>>> a={1, 2, 3,}
+>>> b={1, 2, 3, 4, 5, 6, 7}
+>>> c=a.union(b)
+>>> print(c)
+{1, 2, 3, 4, 5, 6, 7}
+
+obj.intersection()      Dono sets mein common  elements.
+------------------------------
+>>> d=a.intersection(b)
+>>> print(d)
+{1, 2, 3}
+
+.difference()
+------------------------------
+>>> b={1, 2, 3, 4, 5, 6, 7}
+>>> a={1, 2, 3,}
+>>> c=a.difference(b)     a.difference(b) = A ka woh hissa jo B mein nahi hai
+>>> print(c)
+set()
+>>> c=b.difference(a)
+>>> print(c)
+{4, 5, 6, 7}
+
+>>> a={1, 2, 5}
+>>> b={3, 4, 5}
+>>> c=a.difference(b)
+>>> print(c)
+{1, 2}
+>>> c=b.difference(a)
+>>> print(c)
+{3, 4}
+
+
+.difference_update
+------------------------------------------------------
+setobj1.difference_update(setobj2)
+>>> c=a.difference_update(b)
+>>> print(c)
+None
+>>> print(a)
+{20, 10}
+
+>>> a.difference_update(b)
+>>> print(a)
+{20, 10}
+
+obj1.symmetric_difference(obj2)
+-------------------------------------------------------------------
+>>> a={10, 20, 30, 70, 80}
+>>> b={10, 20, 30, 90, 100}
+>>> c=a.symmetric_difference(b)
+>>> print(c)
+{80, 100, 90, 70}
+
+
+obj1.symmetric_difference_update(obj2      <---------- Dono ka unique combined
+-----------------------------------------------------)
+>>> c=a.symmetric_difference(b)
+>>> print(c)
+{80, 100, 70, 90, 60}
+>>> c=a.symmetric_difference_update(b)
+>>> print(c)
+None
+>>> print(a)
+{80, 100, 70, 90, 60}
+
+obj1.update(obj2)
+---------------------------------------
+>>> a={1, 2, 3}
+>>> b={"apple", "mango"}
+>>> a.update(b)
+>>> print(a)
+{1, 2, 3, 'apple', 'mango'}
+
+
+>>> a={1, 2, 3, "apple", "mango"}
+>>> b={1, 2, 10, 20, 30, "mango", "apple"}
+>>> a.update(b)
+>>> print(a)
+{1, 2, 3, 10, 20, 'apple', 'mango', 30}
+
+
+.copy()
+------------------------------------
+shalo copy
+
+>>> print(a,id(a))
+{1, 2, 3, 10, 20, 'apple', 'mango', 30} 2337010509952
+>>> b=a.copy()
+>>> print(b,id(b))
+{1, 2, 3, 10, 20, 'apple', 'mango', 30} 2337010511744
+>>> a.add("sarim")
+>>> b.add("ahfaz")
+>>> print(b,id(b))
+{1, 2, 3, 10, 'ahfaz', 20, 'apple', 'mango', 30} 2337010511744
+>>> print(a,id(a))
+{1, 2, 3, 10, 'sarim', 20, 'apple', 'mango', 30} 2337010509952
+
+-------------------------------------------------------------------------------------------------------
+practice questions
+-----------------
+
+1. Find players name who are plying  all the games?
+>>> print(cp)
+{'MS Dhoni', 'Virat Kohli', 'Rohit Sharma'}
+>>> print(tp)
+{'Rohan Bopanna', 'Sania Mirza', 'Leander Paes'}
+>>> allcptp=cp.union(tp)
+>>> print(allcptp)
+{'Sania Mirza', 'Rohit Sharma', 'Leander Paes', 'MS Dhoni', 'Virat Kohli', 'Rohan Bopanna'}
+
+
+2. Find players name who are playing both cricket and tennis?
+>>> cp = {"Virat Kohli", "Rohit Sharma", "MS Dhoni", "Rossom"}
+>>> tp = {"Sania Mirza", "Leander Paes", "Rohan Bopanna", "Rossom"}
+>>> bothcptp=cp.intersection(tp)
+>>> print(bothcptp)
+{'Rossom'}
+
+
+3. Find players name who are playing only cricket not tennis? 
+>>> print(cp)
+{'MS Dhoni', 'Virat Kohli', 'Rossom', 'Rohit Sharma'}
+>>> print(tp)
+{'Rossom', 'Rohan Bopanna', 'Sania Mirza', 'Leander Paes'}
+>>> onlycp=cp.difference(tp)
+>>> print(onlycp)
+{'MS Dhoni', 'Virat Kohli', 'Rohit Sharma'}
+
+
+4. Find players name who are playing only tennis not cricket?
+>>> print(cp)
+{'MS Dhoni', 'Virat Kohli', 'Rossom', 'Rohit Sharma'}
+>>> print(tp)
+{'Rossom', 'Rohan Bopanna', 'Sania Mirza', 'Leander Paes'}
+>>> onlytp=tp.difference(cp)
+>>> print(onlytp)
+{'Rohan Bopanna', 'Sania Mirza', 'Leander Paes'}
+
+
+5. Find players name who are playing exclusively cricket and tennis?
+>>> exclcptp=cp.symmetric_difference(tp)       <-------- Dono ka unique combined
+>>> print(exclcptp)
+{'Virat Kohli', 'Rohit Sharma', 'Sania Mirza', 'Leander Paes', 'MS Dhoni', 'Rohan Bopanna'}
