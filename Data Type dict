@@ -1,0 +1,247 @@
+>>> b={1:1.1, 1:1.2, 1:1.3, 1:1.4}
+>>> print(b,type(b))
+{1: 1.4} <class 'dict'>
+>>> len(b)
+1
+
+>>> c={1:20, 2:30, 3:40, 1:100}
+>>> print(c,type(c))
+{1: 100, 2: 30, 3: 40} <class 'dict'>
+>>> len(c)
+3
+
+
+>>> a={}
+>>> print(type(a))
+<class 'dict'>
+>>> b=dict()
+>>> print(type(b))
+<class 'dict'>
+
+
+>>> for index, value in enumerate(a):
+...     print(index, value)
+0 apple
+1 mango
+2 greps
+>>> for index, value in enumerate(a):
+...     print(index, value, a[value])
+0 apple 10
+1 mango 20
+2 greps 30
+>>> a["apple"]
+10
+>>> a["mango"]
+20
+
+
+KEY   = Change NAHI kar sakte! ❌
+VALUE = Change KAR sakte hain! ✅
+>>> a["apple"]
+10
+>>> a["apple"]="chiku"
+>>> print(a,type(a))
+{'apple': 'chiku', 'mango': 20, 'greps': 30} <class 'dict'>
+>>> a["apple"]="400"
+>>> print(a,type(a))
+{'apple': '400', 'mango': 20, 'greps': 30} <class 'dict'>
+
+
+>>> print(a)
+{'AC1': 900, 'AC2': 900, 'AC3': 700, 200: 1000}
+>>> a["AC3"]=0
+>>> print(a)
+{'AC1': 900, 'AC2': 900, 'AC3': 0, 200: 1000}
+
+adding and changing on same address
+>>> a["address"]="Govandi"
+>>> print(a,id(a))
+{'AC1': 900, 'AC2': 900, 'AC3': 0, 200: 1000, 'AC9': 14380, 'address': 'Govandi'} 2208692734848
+Add the key-vaue in dict
+----------------------------
+>>> a["AC1"]=400
+>>> print(a,id(a))
+{'AC1': 400, 'AC2': 900, 'AC3': 0, 200: 1000, 'AC9': 14380, 'address': 'Govandi'} 2208692734848
+
+>>> a["AC1"]
+400
+>>> a["AC1"]=765
+>>> a["AC1"]
+765
+
+.pop            <-----     remove the key-value from dict
+
+KEY   = Delete kar sakte hain ✅
+VALUE = Delete NAHI kar sakte ❌
+VALUE = Sirf MODIFY kar sakte hain
+-------------------------------
+>>> print(a,type(a),id(a))
+{'AC1': 765, 'AC2': 900, 200: 1000, 'AC9': 14380, 'pincode': 400043} <class 'dict'> 2043818791552
+
+>>> a["pincode"]=423203
+>>> print(a,type(a),id(a))
+{'AC1': 765, 'AC2': 900, 200: 1000, 'AC9': 14380, 'pincode': 423203} <class 'dict'> 2043818791552
+
+>>> a["address"]="mumai"
+>>> print(a,type(a),id(a))
+{'AC1': 765, 'AC2': 900, 200: 1000, 'AC9': 14380, 'pincode': 423203, 'address': 'mumai'} <class 'dict'> 2043818791552
+
+>>> a.pop("pincode")
+423203
+>>> a.pop("address")
+'mumai'
+>>> print(a,type(a),id(a))
+{'AC1': 765, 'AC2': 900, 200: 1000, 'AC9': 14380} <class 'dict'> 2043818791552
+
+>>> a.popitem()
+('AC9', 14380)
+>>> a.popitem()
+(200, 1000)
+>>> print(a,id(a))
+{'AC1': 765, 'AC2': 900} 2043818791552
+>>> a.popitem()
+('AC2', 900)
+>>> print(a,id(a))
+{'AC1': 765} 2043818791552
+>>> a.popitem()
+('AC1', 765)
+>>> print(a,id(a))
+{} 2043818791552
+
+
+ obj.clear()
+ ---------------------------------
+>>> a.clear()
+>>> print(a,type(a))
+{} <class 'dict'>
+
+>>> print({}.clear())
+None
+>>> print({}.clear())
+None
+>>> print(dict().clear())
+None
+
+
+.copy
+-------------
+shallow copy
+>>> print(a)
+{'AC1': 765, 'AC2': 900, 200: 1000, 'AC9': 14380, 'pincode': 400043}
+>>> b={"name":"sarim", "EMP-id":"TE000302"}
+>>> print(b)
+{'name': 'sarim', 'EMP-id': 'TE000302'}
+>>> a=b.copy()
+>>> print(a)
+{'name': 'sarim', 'EMP-id': 'TE000302'}
+
+.get
+-------------------------------------------
+>>> print(a)
+{'name': 'sarim', 'EMP-id': 'TE000302'}
+>>> a.get("name")
+'sarim'
+>>> employname=a.get("name")
+>>> print(employname)
+sarim
+>>> a["employname"]
+sarim
+
+
+
+.keys()
+-------------------
+>>> print(bank)
+{'AC1': 765, 'AC2': 900, 200: 1000, 'AC9': 14380, 'pincode': 423203, 'address': 'mumai'}
+>>> bank_keys=bank.keys()
+>>> print(bank_keys)
+dict_keys(['AC1', 'AC2', 200, 'AC9', 'pincode', 'address'])
+
+
+>>> bank={'AC1': 765, 'AC2': 900, 200: 1000, 'AC9': 14380, 'pincode': 423203, 'address': 'mumai'}
+>>> values_bank=bank.values()
+>>> print(values_bank)
+dict_values([765, 900, 1000, 14380, 423203, 'mumai'])
+
+
+
+
+
+
+ items() 
+------------------------------------
+a={'AC1': 765, 'AC2': 900, 200: 1000, 'AC9': 14380, 'pincode': 400043}
+ >>> print(a.items())
+dict_items([('AC1', 765), ('AC2', 900), (200, 1000), ('AC9', 14380), ('pincode', 400043)])
+
+
+>>> for k,v in a.items():
+...     print(k,"------>",v)
+...
+AC1 ------> 765
+AC2 ------> 900
+200 ------> 1000
+AC9 ------> 14380
+pincode ------> 400043
+
+
+update()
+---------------------------------------
+
+update() =
+Same key → Value replace!
+New key  → Key-value add!
+
+>>> a={"name":"sarim", "surname":"ansari", "EMP-ID":"TE000302", 123:"abc", 567:"tru"}
+>>> b={"name":"ahfaz", "surname":"shaikh", "EMP-ID":"TE000111"}
+>>> b.update(a)
+>>> print(b)
+{'name': 'sarim', 'surname': 'ansari', 'EMP-ID': 'TE000302', 123: 'abc', 567: 'tru'}
+
+
+
+dict in dict  (inner-dict)
+----------------------------------
+>>> for key, value in b.items():
+...     print(key,"------>",value,"---->",type(b))
+
+name ------> ahfaz ----> <class 'dict'>
+surname ------> shaikh ----> <class 'dict'>
+ID ------> TE000111 ----> <class 'dict'>
+subject ------> {'maths': 20, 'science': 40, 'english': 70} ----> <class 'dict'>
+college-name ------> summaiya ----> <class 'dict'>
+
+
+
+>>> b.get("subject")             <-------------to get the inner dict
+{'maths': 20, 'science': 40, 'english': 70}
+
+>>> for key, value in b.get("subject").items():
+...     print(key,"--------------->",value)
+...
+maths ---------------> 20
+science ---------------> 40
+english ---------------> 70
+
+
+
+>>> print(b)
+{'name': 'ahfaz', 'surname': 'shaikh', 'ID': 'TE000111', 'subject': {'maths': 20, 'science': 40, 'english': 70}, 'college-name': 'summaiya'}
+>>> b["subject"]["science"]=100
+>>> print(b)
+{'name': 'ahfaz', 'surname': 'shaikh', 'ID': 'TE000111', 'subject': {'maths': 20, 'science': 100, 'english': 70}, 'college-name': 'summaiya'}
+>>> b["subject"]["english"]=100
+>>> print(b)
+{'name': 'ahfaz', 'surname': 'shaikh', 'ID': 'TE000111', 'subject': {'maths': 20, 'science': 100, 'english': 100}, 'college-name': 'summaiya'}
+
+>>> b.get("intsubject").get("science")
+40
+
+
+
+
+b["int-ext-mathsmarks"] = b["intsubject"]["maths"] + b["extsubject"]["maths"]
+>>> print(b)
+{'name': 'ahfaz', 'surname': 'shaikh', 'ID': 'TE000111', 'intsubject': {'maths': 20, 'science': 40, 'english': 70}, 'college-name': 'summaiya', 'extsubject': {'maths': 40, 'english': 70}, 'int-ext-mathsmarks': 60}
+
+
