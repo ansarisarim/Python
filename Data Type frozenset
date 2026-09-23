@@ -1,0 +1,22 @@
+>>> a={1, 2, 3}
+>>> print(a, type(a))
+{1, 2, 3} <class 'set'>
+>>> a.add(10)
+>>> print(a,type(a))
+{10, 1, 2, 3} <class 'set'>
+>>> b=frozenset(a)
+>>> print(b,type(b))
+frozenset({10, 1, 2, 3}) <class 'frozenset'>
+>>> b.add(10)
+Traceback (most recent call last):
+  File "<python-input-103>", line 1, in <module>
+    b.add(10)
+    ^^^^^
+AttributeError: 'frozenset' object has no attribute 'add'
+
+>>> b.discard(1)
+Traceback (most recent call last):
+  File "<python-input-106>", line 1, in <module>
+    b.discard(1)
+    ^^^^^^^^^
+AttributeError: 'frozenset' object has no attribute 'discard'
