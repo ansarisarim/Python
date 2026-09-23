@@ -86,7 +86,7 @@ True
 
 
 
-range
+tuple 
 --------------------------------
 >>> tup1=(10, "python")
 >>> tup2=(10, "python")
@@ -98,7 +98,7 @@ range
 False
 
 
-tuple
+range
 --------------------------------
 
 >>> R1=range(1, 20)
