@@ -70,3 +70,55 @@ False
 >>> s1=s2
 >>> s1 is s2
 True
+
+
+list
+--------------------------------
+
+>>> print(lat1,type(lat1),id(lat1))
+[10, 'python'] <class 'list'> 2903699444736
+>>> print(lat2,type(lat2),id(lat2))
+[10, 'python'] <class 'list'> 2903699447104
+>>> lat1 is lat2
+False
+>>> lat1 is not lat2
+True
+
+
+
+range
+--------------------------------
+>>> tup1=(10, "python")
+>>> tup2=(10, "python")
+>>> print(tup1,type(tup1),id(tup1))
+(10, 'python') <class 'tuple'> 2903699284416
+>>> print(tup2,type(tup2),id(tup2))
+(10, 'python') <class 'tuple'> 2903699440704
+>>> tup1 is tup2
+False
+
+
+tuple
+--------------------------------
+
+>>> R1=range(1, 20)
+>>> R2=range(1, 20)
+>>> print(R1,type(R1),id(R1))
+range(1, 20) <class 'range'> 2903689314240
+>>> print(R2,type(R2),id(R2))
+range(1, 20) <class 'range'> 2903687311600
+>>> R1 is R2
+False
+>>> R1 is not R2
+True
+
+
+
+
+
+
+
+
+
+
+
