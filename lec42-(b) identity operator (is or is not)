@@ -134,6 +134,39 @@ True
 
 
 
+string
+--------------------------------
+
+>>> p1="mumbai"
+>>> p2="mumbai"
+>>> print(p1,type(p1),id(p1))
+mumbai <class 'str'> 2903699093376
+>>> print(p2,type(p2),id(p2))
+mumbai <class 'str'> 2903699093376
+>>> p1 is p2
+True
+
+>>> p1="mumbai"
+>>> p2="Mumbai"
+>>> print(p1,type(p1),id(p1))
+mumbai <class 'str'> 2903699093376
+>>> print(p2,type(p2),id(p2))
+Mumbai <class 'str'> 2903699092272
+>>> p1 is p2
+False
+>>> p1 is not p2
+True
+
+
+complex
+---------------------------------
+>>> a=2+2j
+>>> b=2+2j
+>>> a is b
+False
+
+
+
 
 
 
