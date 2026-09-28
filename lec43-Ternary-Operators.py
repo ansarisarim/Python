@@ -24,3 +24,11 @@ print(result)
 
 
 
+Q. write a python program which will accept the numerical iteger value or float vale and decide whether it is even or od?
+a= float( input ("enter the first value"))
+b= float( input ("rnter the second value"))
+resulte = "
+
+
+
+
