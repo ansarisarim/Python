@@ -24,10 +24,17 @@ print(result)
 
 
 
+
+-------------------------------------------------------------------------------------------
+
 Q. write a python program which will accept the numerical iteger value or float vale and decide whether it is even or od?
-a= float( input ("enter the first value"))
-b= float( input ("rnter the second value"))
-resulte = "
+% baaki nikaalta hai (remainder)
+10 ÷ 2 = 5  (baaki 0)
+15 ÷ 2 = 7  (baaki 1)
+
+a= float( input ("enter the first value --> "))
+resulte = "even" if a%2==0 else "odd"
+print("{}, is {}".format(a,resulte))
 
 
 
