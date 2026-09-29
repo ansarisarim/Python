@@ -37,5 +37,12 @@ resulte = "even" if a%2==0 else "odd"
 print("{}, is {}".format(a,resulte))
 
 
+-------------------------------------------------------------------------------------------
+# write a code to know value is od or even and ovoide the negative value
+a=float(input(" enter the value please "))
+result= "its a negative value" if a < 0 else "even" if a %2 == 0 else "odd"
+print(result)
+
+
 
 
