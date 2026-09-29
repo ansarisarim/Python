@@ -43,6 +43,9 @@ a=float(input(" enter the value please "))
 result= "its a negative value" if a < 0 else "even" if a %2 == 0 else "odd"
 print(result)
 
+-------------------------------------------------------------------------------------------
+# write apython program whic will decide either word have wovel or not
+
 
 
 
