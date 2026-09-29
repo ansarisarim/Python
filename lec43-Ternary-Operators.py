@@ -45,7 +45,16 @@ print(result)
 
 -------------------------------------------------------------------------------------------
 # write apython program whic will decide either word have wovel or not
+word = input("Enter a word: ")
 
+result = "Vowel alphabet" if "a" in word or "e" in word or "i" in word or "o" in word or "u" in word else "Not a Vowel Alphabet"
 
+print("{} word has the {}".format(word, result))
+
+-------------------------------------------------------------------------------------------
+# write a apython program which wil accept the word and decide whether it is palandrom or not
+a = input("inter the value ")
+result= "palandrom value" if a==a[::-1] else "not palandrom value"
+print("{}, is {} " .format(a,result))
 
 
