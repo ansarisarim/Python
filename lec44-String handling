@@ -1,4 +1,4 @@
-.capitalize()
+1)  .capitalize()
 -----------------------------------------------------------------------
 
 >>> s="python"     (str is the immutable)
@@ -27,7 +27,7 @@ Python is the programing lanhuage. python is dynaic lauage
 
 
 
-.title()
+2)  .title()
 -----------------------------------------------------------------------
 >>> a="python is the programing language"
 >>> a=a.capitalize()
@@ -42,13 +42,83 @@ Python Is The Programing Language
 
 
 
-.count()
+3)  .count()
 -----------------------------------------------------------------------
 >>> s="python"
 >>> s.count("p")
+1
+
+
+>>> z="aabcdbbxyz"
+>>> z.count(a)
+0
+>>> z.count("a")
+2
+>>> z.count("aa")
 1
 >>> s="pythonpppppPPP"
 >>> s.count("p")
 6
 >>> s.count("P")
 3
+
+
+>>> z.count("aab")
+1
+>>> z.count("baa")
+0
+
+
+>>> z.count("ro")
+0
+>>> z.count("o")
+0
+
+
+
+4 .swapcase()
+--------------------------------
+
+>>> a="pYtHon"
+>>> a.swapcase()
+'PyThON'
+>>> a=a.swapcase()
+>>> print(a)
+PyThON
+
+
+>>> b="AbCdEfGGhh"
+>>> b=b.swapcase()
+>>> print(b)
+aBcDeFggHH
+
+
+
+5)  .upper()
+--------------------------------
+>>> a="pYtHon"
+>>> a=a.upper()
+>>> print(a)
+PYTHON
+
+
+>>> a="pytho.@123"
+>>> a=a.upper()
+>>> print(a)
+PYTHO.@123
+
+
+
+6)  .lower()
+--------------------------------
+>>> print(a)
+PYTHO.@123
+>>> a=a.lower()
+>>> print(a)
+pytho.@123
+
+>>> a="PTHon"
+>>> a=a.lower()
+>>> print(a)
+pthon
+>>>
