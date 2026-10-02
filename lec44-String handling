@@ -1,0 +1,54 @@
+.capitalize()
+-----------------------------------------------------------------------
+
+>>> s="python"     (str is the immutable)
+>>> id(s)
+2903685316064
+>>> s=s.capitalize()
+>>> print(s,id(s))
+Python 2903698494576
+
+# Agar modify hota toh ID same hota!
+# ID alag = New object bana!
+
+
+ a="Python Is The Programing Lanhuage"
+>>> a=a.capitalize()
+>>> print(a)
+Python is the programing lanhuage
+
+
+>>> a="Python Is The Programing Lanhuage. Python is dynaic Lauage"
+>>> a=a.capitalize()
+>>> print(a)
+Python is the programing lanhuage. python is dynaic lauage
+
+
+
+
+
+.title()
+-----------------------------------------------------------------------
+>>> a="python is the programing language"
+>>> a=a.capitalize()
+>>> print(a)
+Python is the programing language
+>>> a=a.title()
+>>> print(a)
+Python Is The Programing Language
+
+
+
+
+
+
+.count()
+-----------------------------------------------------------------------
+>>> s="python"
+>>> s.count("p")
+1
+>>> s="pythonpppppPPP"
+>>> s.count("p")
+6
+>>> s.count("P")
+3
