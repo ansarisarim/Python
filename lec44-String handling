@@ -217,7 +217,7 @@ False
 
 
 
-8)  .isalpha()
+9)  .isalpha()
 --------------------------------
 >>> a="sarim"
 >>> a.isalpha()
@@ -246,7 +246,7 @@ True
 
 
 
-.isalnum()
+10)  .isalnum()
 ---------------------------------------------------------
 
 >>> a="sarim"                            (special symbols is--> false)
