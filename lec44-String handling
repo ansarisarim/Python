@@ -122,3 +122,149 @@ pytho.@123
 >>> print(a)
 pthon
 >>>
+
+
+6)  .isupper()
+--------------------------------
+>>> a="python"
+>>> a.isupper()
+False
+>>> a.islower()
+True
+
+
+
+>>> a="PythON"
+>>> a.isupper()
+False
+>>> a.islower()
+False
+
+
+>>> a="PYTHON"
+>>> a.islower()
+False
+>>> a.isupper()
+True
+
+
+>>> a="123"
+>>> a.isupper()
+False
+>>> a.islower()
+False
+
+
+
+
+7)  .islower()
+--------------------------------
+>>> a="python"
+>>> a.isupper()
+False
+>>> a.islower()
+True
+
+
+
+>>> a="PythON"
+>>> a.isupper()
+False
+>>> a.islower()
+False
+
+
+>>> a="PYTHON"
+>>> a.islower()
+False
+>>> a.isupper()
+True
+
+
+>>> a="123"
+>>> a.isupper()
+False
+>>> a.islower()
+False
+
+
+
+
+8)  .isdigit()
+--------------------------------
+>>> a="123"
+>>> a.isdigit()
+True
+>>> a="123a"
+>>> a.isdigit()
+False
+>>> a="123.34"               <----------------- . is not a digit also its string donot consider its a flot value
+>>> a.isdigit()
+False
+
+
+
+>>> a="123@34"
+>>> a.isdigit()
+False
+>>> a="123-34"
+>>> a.isdigit()
+False
+
+
+
+
+
+
+
+8)  .isalpha()
+--------------------------------
+>>> a="sarim"
+>>> a.isalpha()
+True
+>>> a.isalpha()
+True
+>>> a="sa rim"
+>>> a.isalpha()
+False
+>>> a="sarim@"
+>>> a.isalpha()
+False
+>>> a="sarim ansari"
+>>> a.isalpha()
+False
+>>> a="sarimansari"
+>>> a.isalpha()
+True
+
+
+
+
+
+
+
+
+
+
+.isalnum()
+---------------------------------------------------------
+
+>>> a="sarim"                            (special symbols is--> false)
+>>> a.isalnum()
+True
+
+>>> a="123"
+>>> a.isalnum()
+True
+
+>>> a="sarim@"
+>>> a.isalnum()
+False
+
+>>> a="sarim#"
+>>> a.isalnum()
+False
+
+>>> a="sarim 123"
+>>> a.isalnum()
+False
