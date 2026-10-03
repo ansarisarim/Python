@@ -268,3 +268,59 @@ False
 >>> a="sarim 123"
 >>> a.isalnum()
 False
+
+
+
+11)  .index()
+---------------------------------------------------------
+>>> b="python is the high performing programing language"
+>>> b.index("p")
+0
+>>> b.index("i")
+7
+
+
+
+
+
+12)  .lstrip()             <----------- l=left
+---------------------------------------------------------
+>>> a="    sarim"
+>>> print(a,len(a))
+    sarim 9
+>>> a=a.lstrip()
+>>> print(a,len(a))
+sarim 5
+
+
+
+13)  .rstrip()                 <-----r=right
+---------------------------------------------------------
+>>> a="sarim    "
+>>> print(a,len(a))
+sarim     9
+>>> a=a.rstrip()
+>>> print(a,len(a))
+sarim 5
+
+
+
+14)  .strip()          <--------- l and r both
+---------------------------------------------------------
+
+
+>>> a="   sarim    "
+>>> print(a,len(a))
+   sarim     12
+>>> a=a.strip()
+>>> print(a,len(a))
+sarim 5
+
+
+>>> a="python is the programing language"
+>>> print(a,len(a))
+python is the programing language 33
+>>> a=a.strip                           <-----------strip only remve l= LEFT r = RIGHT only
+>>> print(a,len(a))
+python is the programing language 33
+
