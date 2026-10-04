@@ -324,3 +324,64 @@ python is the programing language 33
 >>> print(a,len(a))
 python is the programing language 33
 
+
+
+
+15)  .split()
+---------------------------------------------
+>>> a="python is the programing language"
+>>> a=a.split()
+>>> print(a)
+['python', 'is', 'the', 'programing', 'language']
+>>> a="python-is-the-programing-language"
+
+
+
+16)  .split(delimter)
+---------------------------------------------
+>>> a=a.split("-")
+>>> print(a)
+['python', 'is', 'the', 'programing', 'language']
+>>> a="python$is-the-programing$language"
+>>> a=a.split("$")
+>>> print(a)
+['python', 'is-the-programing', 'language']
+
+
+
+17)  .join()
+---------------------------------------------
+>>> a=["python", "is", "the", "programing", "language"]
+>>> k=" "
+>>> k.join(a)
+'python is the programing language'
+>>>
+>>> k="@"
+>>> k.join(a)
+'python@is@the@programing@language'
+
+
+18)  .startswith("python")
+-------------------------------------------------
+>>> s="python is the programing language"
+>>> s.startswith("python")
+True
+>>> s.startswith("py")
+True
+>>> s.startswith("po")
+False
+>>>
+
+
+
+
+18)  .endwith("python")
+-------------------------------------------------
+>>> s="python is the programing language"
+>>> s.endswith("age")
+True
+>>> s.endswith("language")
+True
+>>> s.endswith("abc")
+False
+
