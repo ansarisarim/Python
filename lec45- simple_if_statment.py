@@ -6,3 +6,7 @@ if(a=="yes"):
     print("enjoy the show!!!")
 
 print("go back to home please")
+
+--------------------------------------------------------------------------------------------------------------------------------
+Q. write a python program which will accept accept two numerical values and fimd biigest amoung them and check for equality 
+by using simple if statment.
