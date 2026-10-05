@@ -1,4 +1,4 @@
-a = str(input("do you have the ticket yes/no : "))
+a = str(input("do you have the ticket yes/no : ")).lower()
 
 if(a=="yes"):
     print("get entry in the premises")
