@@ -27,3 +27,12 @@ print("process finished")
 
 --------------------------------------------------------------------------------------------------------------------------------
 Example-3
+a=str(input("you have the adhar card: " )).lower()
+if(a=="yes"):
+    print("submit the xerox copy")
+    print("write down the adhar number")
+if(a=="no"):
+    print("adhar is mandatory please come with the adhar card")
+if a not in ["yes", "no"]:
+    print("please enter yes or no")
+print("\t thanx for your support")
