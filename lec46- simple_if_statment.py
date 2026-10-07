@@ -75,3 +75,7 @@ if a==9:
     print("{}, is the Nine".format(a))
 if a not in [1, 2, 3, 4, 5, 6, 7, 8, 9] and a<0 :
     print("inter correct value")
+
+
+
+simple if statement.........its check all the if statment its take lots of proccessing time thats why furthe will use ifelse statment to aovoid unneccesary proccesing will see in next slide.
