@@ -77,5 +77,17 @@ if a not in [1, 2, 3, 4, 5, 6, 7, 8, 9] and a<0 :
     print("inter correct value")
 
 
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+a= (input("inter the first value: "))
+b= (input("inter the second value: "))
+if a>b:
+    print("{} is the big number as compare to {}".format(a,b))
+if a and b not in [1,2, 3,4,5, 6,7,8,9]:
+    print("please inter the values in number")
+print("Thank you")
+
+
+
 Note:
 simple if statement.........its check all the if statment its take lots of proccessing time thats why furthe will use ifelse statment to aovoid unneccesary proccesing, will see in next slide.
