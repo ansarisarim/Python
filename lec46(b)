@@ -1,0 +1,26 @@
+a=int(input("Enter a number:  "))
+if a == 0:
+    print("The number is zero")
+else:
+    if a == 1:
+        print("The number is one")
+    else:
+        if a == 2:
+            print("The number is two")
+        else:
+            if a == 3:
+                print("The number is three")
+            else:
+                if a == 4:
+                    print("The number is four")
+                else:
+                    if a == 5:
+                        print("The number is five")
+                    else:
+                        if a == 6:
+                            print("The number is six")
+                        else:
+                            if a not in [1, 2, 3, 4, 5, 6]:
+                             print("inter the nuber in 0 to 6 range")
+
+print("Thank you have a great day")
