@@ -16,3 +16,10 @@ elif a == 6:
     print("The number is six")
 else:
     print("The number does not exist in 0 to 6 range")
+
+-------------------------------------------------------------------------------------------
+
+a = { 1: "One",2: "Two",3: "Three",4: "Four",5: "Five",6: "Six",7: "Seven",8: "Eight",9: "Nine"}
+b = int(input("Enter the number (1-9): "))
+result = a.get(b)
+print("{} ---> {} ".format(b, result))
