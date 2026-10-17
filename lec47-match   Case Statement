@@ -47,3 +47,27 @@ match(abc):
         print("Invalid input")
 print("="*50)
 print("\t process finished")
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+#example number 2
+a=int(input("Enter your first number: "))
+match(a):
+   case 0| 1 | 2 | 3 | 4| 5 :
+    b=hex(a)
+    c=bin(a)
+    print("{}, Hexadecimal value is, {}".format(a,b))
+    print("{}, Binary value is, {}".format(a,c))
+   case _:
+       print("print the integer value only in between 0 t0 5")
+print("program compelety executed")
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+
+
