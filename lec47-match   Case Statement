@@ -1,1 +1,49 @@
+match = "Variable ki value dekho!"
+case  = "Agar yeh value ho toh yeh karo!"
+case _= "Kuch bhi match na ho = Default!"
+-------------------------------------------------------------------------------------------------------------------------------------
+match variable:
+    case 1:
+        # kaam karo
+    case 2:
+        # kaam karo
+    case _:
+        # default
+-------------------------------------------------------------------------------------------------------------------------------------
 
+match-case = if-elif ka clean version!
+case _     = else jaisa!
+Python 3.10+ only!
+
+-------------------------------------------------------------------------------------------------------------------------------------
+Example-1:
+
+
+
+print("\t arithmetic operator")
+print("="*50)
+print("\t 1 for addition")
+print("\t 2 for subtraction")
+print("\t 3 for division")
+print("\t 4 for multiplication")
+print("\t 5 for exponentiation")
+print("="*50)
+abc=int(input("Enter your choice: "))
+match(abc):
+    case 1:
+        print("two values for addition")
+        a=float(input("Enter you first value: "))
+        b=float(input("Enter you second value: "))
+        print("The sum of {}, {} is -> {}".format(a,b,a+b))
+    case 2:
+        print("two values for subtraction")
+        a,b=float(input("Enter you first value: ")),float(input("Enter you second value: "))
+        print("The difference of {}, {} is -> {}".format(a,b,a-b))
+    case 3:
+        print("two values for multiplication")
+        a,b=float(input("Enter you first value: ")),float(input("Enter you second value: "))
+        print("The multiplication of {}, {} is -> {}".format(a,b,a*b))
+    case _:
+        print("Invalid input")
+print("="*50)
+print("\t process finished")
