@@ -37,6 +37,21 @@ match x:
         print("{}, Hexadecimal value is {}".format(b, hexa))
         print("{}, Octal value is {}".format(b, octa))
 
+#a=oct(12)
+# int(a,8)
+# 12
+
+    case 11 | 12 | 13 | 14 | 15 :
+        print("octal to int ,Hex & Binary")
+        a = input("Enter the int value: ")
+        bin_value = bin(int(a,8))
+        int_valuse = int(a,8)
+        hex_value = hex(int(a, 8))
+        print("{}, Hexadecimal value is {}".format(a,  bin_value))
+        print("{}, Binary value is {}".format(a, int_valuse))
+        print("{}, Binary value is {}".format(a, bin_value))
+
+
     case _:
         print("Please enter number only between 0 to 10")
 
