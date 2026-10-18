@@ -52,6 +52,16 @@ match x:
         print("{}, Binary value is {}".format(a, bin_value))
 
 
+    case 16 | 17 | 18 | 19 | 20 :
+        print("hexadecimal  to int ,oct & Binary")
+        a = input("Enter the hexadecimal value: ")
+        bin_value = bin(int(a, 16))
+        int_valuse = int(a, 16)
+        hex_value = oct(int(a, 16))
+        print("{}, Hexadecimal value is {}".format(a,  bin_value))
+        print("{}, Binary value is {}".format(a, int_valuse))
+        print("{}, Binary value is {}".format(a, bin_value))
+
     case _:
         print("Please enter number only between 0 to 10")
 
