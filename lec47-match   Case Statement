@@ -1,3 +1,11 @@
+"Kya main specific value check kar raha hoon?"
+   YES → match-case!
+   NO  → if-else!
+
+"Kya main comparison kar raha hoon? (>,<,>=)"
+   YES → if-else!
+   NO  → match-case!
+-------------------------------------------------------------------------------------------------------------------------------------
 match = "Variable ki value dekho!"
 case  = "Agar yeh value ho toh yeh karo!"
 case _= "Kuch bhi match na ho = Default!"
@@ -68,6 +76,12 @@ print("program compelety executed")
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------
+#example number 3
 
-
-
+a=int(input("Enter your first number: "))
+match(a):
+    case 10 | 9 | 8 | 7 | 6 | 5 :
+        b=a-2
+        print("{}, me se 2 minus karne par {} aayega".format(a,b))
+    case _:
+        print(" 5 to 10 value inter karo")
