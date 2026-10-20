@@ -101,3 +101,31 @@ match x:
         print("your selection of operation is wrong try again")
 
 print("Program completely executed")
+
+
+
+----------------------------------------------------------
+#EXAMPLE 03
+Q. write the python program which will impement the folowing 
+accept epm number, emp name, basic salery
+is basic salery is >=10000 then give the fillowing
+da=25%basicsal
+ta=15%basicsal
+cca=2%basicsal
+hra=8%basicsal
+ma=1%basicsal
+Deduction
+lic=2%basicsal
+gpf=1.5%basicsal
+
+is basic salery is <10000 then give the fillowing
+da=12.5%basicsal
+ta=7.5%basicsal
+cca=1%basicsal
+hra=6%basicsal
+ma=0.5%basicsal
+Deduction
+lic=1%basicsal
+gpf=0.5%basicsal
+
+calculat Netsalary (NetSalery=(basic+da+ta+cca+hra+ma)-(lic+gpf)
