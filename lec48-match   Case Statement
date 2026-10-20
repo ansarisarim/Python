@@ -14,7 +14,42 @@ Phir kuch bhi convert karo!
 '0o27'
 
 ----------------------------------------------------------
+#EXAMPLE 01
 
+wkd=input("Enter the week days : ")
+match wkd:
+    case "Monday":
+        print("{} is the working day".format(wkd))
+    case "Teusday":
+        print("{} is the working day".format(wkd))
+    case "Wensday":
+        print("{} is the working day".format(wkd))
+    case "Thirsday":
+        print("{} is the working day".format(wkd))
+    case "Fridday":
+        print("{} is the working day".format(wkd))
+    case "Saturday":
+        print("{} is the working day".format(wkd))
+    case "Sunday":
+        print("{} is the working day".format(wkd))
+    case _:
+        print("Please inter the crrect day name")
+
+
+#EXAMPLE 01 optimised method
+a=str(input(" Please inter the days name: ")).upper().strip()
+match a:
+    case "MONDAY" | "TUESDAY" | "WEDNESDAY" | "THURSDAY" | "FRIDAY":
+        print("This is the Working days")
+    case "SATURDAY":
+        print("This is the week-off Day")
+    case "SUNDAY":
+        print("This is the Holi-Day")
+    case _:
+        print("Please enter a valid day")
+
+----------------------------------------------------------
+#EXAMPLE 02
 
 print("*" * 50)
 print("Press 0 to 5  →  Convert Integer to Hex & Binary")
