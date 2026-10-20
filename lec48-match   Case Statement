@@ -131,7 +131,6 @@ gpf=0.5%basicsal
 calculat Netsalary (NetSalery=(basic+da+ta+cca+hra+ma)-(lic+gpf)
 
 
-----------------------------------------------------------
 #program for above question
 id = input("Inter Employe ID = ")
 name = input("Inter employe name = ")
