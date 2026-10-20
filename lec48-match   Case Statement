@@ -107,7 +107,7 @@ print("Program completely executed")
 ----------------------------------------------------------
 #EXAMPLE 03
 Q. write the python program which will impement the folowing 
-accept epm number, emp name, basic salery
+accept epm id, emp name, basic salery
 is basic salery is >=10000 then give the fillowing
 da=25%basicsal
 ta=15%basicsal
@@ -129,3 +129,46 @@ lic=1%basicsal
 gpf=0.5%basicsal
 
 calculat Netsalary (NetSalery=(basic+da+ta+cca+hra+ma)-(lic+gpf)
+
+
+----------------------------------------------------------
+#program for above question
+id = input("Inter Employe ID = ")
+name = input("Inter employe name = ")
+basicsalery = int(input("Inter basic salery = "))
+
+if basicsalery > 10000:             
+    da = (25/100)* basicsalery
+    ta = (15/100)* basicsalery
+    cca = (2/100)* basicsalery
+    hra = (8/100)* basicsalery
+    ma = (1/100)* basicsalery
+    lic = (2/100)* basicsalery
+    gpf = (1.5/100)* basicsalery
+    salery_in_account = basicsalery + (da+ta+cca+hra+ma) - (lic+gpf)
+    print("*"*50)
+    print("your DA is {}".format(da))
+    print("your TA is {}".format(ta))
+    print("your CCA is {}".format(cca))
+    print("your HRA is {}".format(hra))
+    print("your salery is {}".format(salery_in_account))
+
+elif basicsalery < 10000:
+    da = (12.5 / 100) * basicsalery
+    ta = (7.5 / 100) * basicsalery
+    cca = (1 / 100) * basicsalery
+    hra = (7 / 100) * basicsalery
+    ma = (0.5 / 100) * basicsalery
+    lic = (1 / 100) * basicsalery
+    gpf = (0.5 / 100) * basicsalery
+    salery_in_account = basicsalery + (da+ta+cca+hra+ma) - (lic+gpf)
+    print("*"*50)
+    print("your DA is {}".format(da))
+    print("your TA is {}".format(ta))
+    print("your CCA is {}".format(cca))
+    print("your HRA is {}".format(hra))
+    print("Deduction")
+    print("your salery is {}".format(salery_in_account))
+
+else:
+    print("you are not fit in criteria ")
