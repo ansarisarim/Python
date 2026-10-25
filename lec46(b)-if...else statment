@@ -1,3 +1,9 @@
+if ke saath condition lagti hai
+elif ke saath bhi condition lagti hai
+else ke saath koi condition nahi lagti
+Agar else mein bhi condition check karni ho toh:else ke andar naya if likhna padta hai.
+
+
 a=int(input("Enter a number:  "))
 if a == 0:
     print("The number is zero")
