@@ -59,16 +59,17 @@ else:
 ------------------------------------------------------------------------------------------------------
 Example 4 # Creating The table
 
-n=int(input("inter the number for generating the table: "))
-if n<0:
-    print("the {} is less than zero".format(n))
-elif n<=10 :
-    i=1
-    while i<=10:
-        print("{} x {} = {}".format(n,i,n*i))
-        i=i+1
+n = int(input("Enter the number for generating the table: "))
+
+if n < 0:
+    print("The {} is less than zero".format(n))
+elif n <= 10:
+    i = 1          # initialization
+    while i <= 10: # condition
+        print("{} x {} = {}".format(n, i, n * i))
+        i = i + 1  # updation
 else:
-    print("the {} is greater than 10".format(n))
+    print("The {} is greater than 10".format(n))
 ------------------------------------------------------------------------------------------------------
 
 
