@@ -57,6 +57,20 @@ else:
         print("\t{}".format(n))
         n=n-2
 ------------------------------------------------------------------------------------------------------
+Example 4 # Creating The table
+
+n=int(input("inter the number for generating the table: "))
+if n<0:
+    print("the {} is less than zero".format(n))
+elif n<=10 :
+    i=1
+    while i<=10:
+        print("{} x {} = {}".format(n,i,n*i))
+        i=i+1
+else:
+    print("the {} is greater than 10".format(n))
+------------------------------------------------------------------------------------------------------
+
 
 
 Q. write a python program which will generate one to n numbers where is n is positive integer value 
