@@ -72,6 +72,29 @@ else:
     print("The {} is greater than 10".format(n))
 ------------------------------------------------------------------------------------------------------
 
+Example 5 #
+
+n = int(input("Enter the value of n: "))
+print("=" * 50)
+print("NatNums\t\tSquares\t\tCubes")
+print("-" * 50)
+s = 0    # Sum of numbers
+ss = 0   # Sum of squares
+cs = 0   # Sum of cubes
+i = 1    # Initialization
+while i <= n:
+    print("{}\t\t\t\t{}\t\t\t{}".format(i, i*i, i*i*i))
+    s = s + i
+    ss = ss + i**2
+    cs = cs + i**3
+    i = i + 1
+else:
+    print("-" * 50)
+    print("{}\t\t{}\t\t{}".format(s, ss, cs))
+    print("-" * 50)
+    print("Program finished")
+
+
 
 
 Q. write a python program which will generate one to n numbers where is n is positive integer value 
