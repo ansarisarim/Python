@@ -96,5 +96,11 @@ else:
 
 
 
+------------------------------------------------------------------------------------------------------
+Even	i % 2 == 0	   2 se divide, 0 bacha
+Odd  	i % 2 == 1	   2 se divide, 1 bacha
+
+
+
 
 Q. write a python program which will generate one to n numbers where is n is positive integer value 
