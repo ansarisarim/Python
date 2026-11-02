@@ -100,6 +100,28 @@ else:
 Even	i % 2 == 0	   2 se divide, 0 bacha
 Odd  	i % 2 == 1	   2 se divide, 1 bacha
 
+n=int(input("enter the number: "))
+if 0>n<9:
+    while 0<n<=8:
+        print(n)
+        n=n-2
+else:
+    print("please enter the number less than or equal to 8")
+
+
+------------------------------------------------------------------------------------------------------
+
+
+n = int(input("Enter the number: ")) # Add this line first!
+if 0 < n <= 20:  # Gate: n zero se bada aur 10 ya 10 se chota hona chahiye
+    while n % 2 == 0 and n > 0:
+        print("odd numbers comes under {}".format(n))
+        n = n - 1
+    else:
+        while n % 2 == 1 and n > 0:  # Loop ko exactly yahin rokna padega 0 aane par
+            print("odd numbers comes under {}".format(n))
+            n = n - 2
+
 
 
 
