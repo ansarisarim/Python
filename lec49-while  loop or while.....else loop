@@ -124,5 +124,21 @@ if 0 < n <= 20:  # Gate: n zero se bada aur 10 ya 10 se chota hona chahiye
 
 
 
+------------------------------------------------------------------------------------------------------
+Example 5 #    for geting multiplication table
+
+n=int(input("enter the value to get multiplication table: "))
+if n<0:
+    print("the {} is less than zero".format(n))
+else:
+    print("*" * 50)
+    print(" Below is the {} multiplication table".format(n))
+    i = 1
+    while i<=10:
+        print("\t\t{} X {} = {}".format(n,i,n*i))
+        i = i + 1
+
+
+
 
 Q. write a python program which will generate one to n numbers where is n is positive integer value 
